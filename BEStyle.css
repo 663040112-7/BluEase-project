@@ -14,29 +14,29 @@ body {
 .menu {
     display: flex;
     background-color: rgb(227, 241, 255);
-    padding: 15px 20px;
-    height: 91px;
+    padding: 15px;
+    height: 35px;
     border-radius: 25px;
     box-shadow: 5px 5px 5px  rgb(187, 194, 203 );
     margin: 10px;
 }
 
 .menu t{
-    font-size: 50px;
+    font-size: 27px;
     font-weight: bold;
     font-family: 'Baloo Bhai';
     color: rgb(54, 48, 98);
     margin-left: 100px;
-    margin-right: 200px;
+    margin-right: 600px;
 }
 
 .menu a {
-    font-size: 30px;
+
+    font-size: 18px;
     font-family: 'Noto Sans Thai';
     color: rgb(54, 48, 98);
-    padding: 30px;
-    padding-top: 35px;
-    padding-bottom: 40px;
+    padding: 14px;
+    padding-top: 23px;
 }
 
 .menu a:hover {
