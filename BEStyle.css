@@ -15,10 +15,10 @@ body {
     display: flex;
     background-color: rgb(227, 241, 255);
     padding: 15px 20px;
-    height: 91px;
-    border-radius: 25px;
+    height: 30px;
+    border-radius: 20px;
     box-shadow: 5px 5px 5px  rgb(187, 194, 203 );
-    margin: 10px;
+    margin: 7px;
 }
 
 .menu t{
@@ -35,8 +35,8 @@ body {
     font-family: 'Noto Sans Thai';
     color: rgb(54, 48, 98);
     padding: 30px;
-    padding-top: 35px;
-    padding-bottom: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .menu a:hover {
