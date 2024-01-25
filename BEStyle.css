@@ -1,28 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo Bhai');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap');
+
 body {
-    background-color:white;
+    background-color: white;
     background-size: cover;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-.menu{
-    font-size: 20px;
-    color: black;
-    background-color: lightblue;
+.menu {
+    display: flex;
+    background-color: rgb(227, 241, 255);
     padding: 15px 20px;
+    height: 91px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px  rgb(187, 194, 203 );
+    margin: 10px;
 }
-.one li{
-    display:inline;
-}
-.menu a{
-    text-decoration: underline;
-    color: black;
 
-    margin-left: 20px;
+.menu t{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Baloo Bhai';
+    color: rgb(54, 48, 98);
+    margin-left: 100px;
+    margin-right: 200px;
 }
+
+.menu a {
+    font-size: 30px;
+    font-family: 'Noto Sans Thai';
+    color: rgb(54, 48, 98);
+    padding: 30px;
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+
+.menu a:hover {
+    background-color: rgb(142,197,250) ;
+    transition: background-color 0.5s;
+}
+
 .menu ul {
     list-style: none;
     padding: 0;
@@ -31,5 +52,6 @@ body {
 
 .menu li {
     display: inline-block;
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px;
+    /* Adjust the margin as needed */
 }
