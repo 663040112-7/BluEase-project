@@ -25,7 +25,7 @@ body {
 
 }
 
-.menu t {
+.main {
     position: absolute;
     top:9px;
     left:40px;
@@ -34,9 +34,12 @@ body {
     font-weight: bold;
     font-family: 'Baloo Bhai';
     color: rgb(54, 48, 98);
+    cursor: pointer;
+
+    text-decoration: none;
 }
 
-.menu a {
+.choices a{
     font-size: 17px;
     font-family: 'Noto Sans Thai';
     color: rgb(54, 48, 98);
@@ -46,21 +49,19 @@ body {
     padding-bottom: 23.5px;
 }
 
-.menu a:hover {
+.choices a:hover {
     background-color: rgb(142, 197, 250);
     transition: background-color 0.5s;
 }
 
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.choices a:active {
+    background-color: rgb(109, 156, 199);
 }
 
-.menu li {
+.menu ul li {
+    list-style: none;
     display: inline-block;
-    margin-right: 10px;
-    /* Adjust the margin as needed */
+    margin: 0px;
 }
 
 .box{
@@ -82,4 +83,8 @@ body {
 .box a .fas{
     color: rgb(142, 197, 250);
     font-size: 18px;
+}
+
+#choice1 {
+    background-color: rgb(142, 197, 250) ;
 }
