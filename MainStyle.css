@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo Bhai');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap');
+
+body {
+    background-color: white;
+    background-size: cover;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    background-color: rgb(227, 241, 255);
+    padding: 15px 20px;
+    height: 35px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px rgb(187, 194, 203);
+    margin: 7px;
+
+    text-align: right;
+    position: relative;
+
+}
+
+.main {
+    position: absolute;
+    top:9px;
+    left:40px;
+
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Baloo Bhai';
+    color: rgb(54, 48, 98);
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.choices a{
+    font-size: 17px;
+    font-family: 'Noto Sans Thai';
+    color: rgb(54, 48, 98);
+
+    padding: 20px;
+    padding-top: 14.5px;
+    padding-bottom: 23.5px;
+}
+
+.choices a:hover {
+    background-color: rgb(142, 197, 250);
+    transition: background-color 0.5s;
+}
+
+.choices a:active {
+    background-color: rgb(109, 156, 199);
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+}
+
+.box{
+    position: relative;
+}
+.box:hover input{
+    width: 100px;
+}
+
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.box a .fas{
+    color: rgb(142, 197, 250);
+    font-size: 18px;
+}
