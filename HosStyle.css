@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo Bhai');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap');
 
-body {
+.container {
     background-color: white;
     background-size: cover;
-
 }
 
 * {
@@ -21,53 +20,50 @@ body {
     margin: 7px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
+    justify-content: right;
 }
 
-.main {
+.menu .main {
+    position: absolute;
+    left: 25px;
     margin-left: 20px;
     font-size: 27px;
     font-weight: bold;
     font-family: 'Baloo Bhai';
     color: rgb(54, 48, 98);
     cursor: pointer;
-
     text-decoration: none;
 }
 
-.choices a{
+.menu li a{
+    margin:10px;
     font-size: 17px;
     font-family: 'Noto Sans Thai';
     color: rgb(54, 48, 98);
-
-    padding: 20px;
+    padding: 1.25rem 1rem 1.26rem;
 }
 
-.choices a:hover {
+.menu ul li a:hover {
     background-color: rgb(142, 197, 250);
-    transition: background-color 0.5s;
+    transition: 0.5s;
 }
 
-.choices a:active {
+.menu li a:active {
     background-color: rgb(109, 156, 199);
 }
 
-.menu ul li {
+.menu li {
     list-style: none;
     display: inline-block;
     margin: 0px;
 }
 
-.box{
-    position: relative;
-}
-.box:hover input{
+.Search:hover input{
     width: 100px;
 }
 
-.box input{
+.Search input{
     width: 0;
     outline: none;
     border: none;
@@ -76,10 +72,140 @@ body {
     background: transparent;
 }
 
-.box a .fas{
+.Search a .fas{
     color: rgb(142, 197, 250);
-    font-size: 18px;
 }
+.Search:hover{
+    transition: .3s;
+    text-shadow: 0 0 20px rgb(136, 165, 184);
+}
+
+#check{
+    display: none;
+}
+.checkbtn{
+    margin: 7px 0px 7px;
+    font-size: 3rem;
+    font-size: 1.5rem;
+    color: rgb(54, 48, 98);
+    padding: .5rem 1rem;
+    border-radius: .5rem ;
+    border: .1rem solid rgba(33, 97, 140,.2);
+    cursor: pointer;  
+    display: none;  
+}
+
+
+
+
+
+
+@media (max-width: 870px) {
+    .checkbtn{
+        display: block;
+    }
+
+    .menu ul{
+        position: fixed;
+        width: 200px;
+        height: 260px;
+        background:rgb(193, 228, 251);
+        top: 80px;
+        right: .8rem;
+        text-align: center;
+        transition: all .5s;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        box-shadow: 0px 0px 15px rgb(202, 211, 222);
+        transform: translateX(130%);
+    }
+    .menu ul a{
+        font-size: 18px;
+        margin:.5rem ;
+        padding:.5rem;
+        display: block;
+    }
+
+    .menu ul li a:hover{
+        background: none;
+        color: white;
+        text-shadow: 0 0 15px rgb(15, 77, 117);
+        transition: .3s;
+    }
+
+    #check:checked ~ .menu ul {
+        transition: .2s;
+        transform: translateX(0%);
+    }
+} 
+
+@media(max-width: 400px) {
+    .checkbtn{
+        margin: 0px;
+        padding: .5rem ;
+        font-size: 1rem;
+    }
+
+    .menu .main{
+        margin-left: 10px;
+        font-size: 1.2rem;
+    }
+
+    .menu ul {
+        width: 40%;
+        height: 180px;
+        top: 80px;
+    }
+
+    .menu ul li a{
+        margin:.2rem ;
+    }
+
+    .menu li a {
+        font-size: small;
+    }
+}
+
+@media (max-width: 300px),(max-height: 400px){
+    .checkbtn{
+        padding: .3rem ;
+        font-size: .8rem;
+    }
+    .menu {
+        box-shadow: 0px 0px 15px rgb(198, 205, 214);
+        height: 1.2rem;
+    }
+    .menu .main{
+        font-size: 1rem;
+    }
+
+    .menu ul {
+        width: 110px;
+        height: 120px;
+        top: 60px;
+    }
+
+    .menu ul li a{
+        margin:0 ;
+        padding:.3rem;
+        display: block;
+    }
+
+    .menu li a {
+        font-size: .7rem;
+    }
+
+    .Search:hover input{
+        width: 40px;
+    }
+    
+    .Search input{
+        font-size: 10px;
+        font-weight: 300;
+    }
+}
+
+
 
 #choice3 {
     background-color: rgb(142, 197, 250) ;

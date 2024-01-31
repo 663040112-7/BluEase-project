@@ -8,22 +8,29 @@
     <link rel="stylesheet" href="EvaStyle.css">
 </head>
 <body>
-    <div class="container">
-        <div class="menu">
-            <a class="main" href="Main.html">BluEase</a>
-            <ul class ="choices">
-                <li><a id=choice1 href="Evaluation.html">แบบประเมิน</a></li>
-                <li><a id=choice2 href="Knowledge.html">คลังความรู้</a></li>
-                <li><a id=choice3 href="Hospital.html">สถานที่รักษา</a></li>
-                <li><a id=choice4 href="Ot.disease.html">โรคที่เกี่ยวข้อง</a></li>
-                <li><div class="box">
-                    <input type="text" placeholder="Search...">
-                    <a href="">
-                        <i class="fa-solid fa-magnifying-glass"></i></a>
-                </div></li>
-            </ul>
-        </div>
-
+  <div class="container">
+    <input type="checkbox" name="" id="check">
+    <nav class="menu">
+        <a class="main" href="Main.html">BluEase</a>
+        <ul>
+            <li><a class ="choice choice1" href="Evaluation.html">แบบประเมิน</a></li>
+            <li><a class ="choice choice2" href="Knowledge.html">คลังความรู้</a></li>
+            <li><a class ="choice choice3" href="Hospital.html">สถานที่รักษา</a></li>
+            <li><a class ="choice choice4" href="Ot.disease.html">โรคที่เกี่ยวข้อง</a></li>
+        </ul>
+        <li>
+            <div class="Search">
+                <input type="text" placeholder="Search...">
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        <li>
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+</div>
         <div class="col-md-9"> <br />
             <h1 align="center"> แบบประเมินโรคซึมเศร้า </h1>
             <h2 align="center"> (เกณฑ์ให้คะแนน : ไม่เลย = 0, มีบางวันหรือไม่บ่อย = 1, มีค่อนข้างบ่อย = 2, มีเกือบทุกวัน = 3)</h2>
