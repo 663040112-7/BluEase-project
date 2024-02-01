@@ -7,6 +7,7 @@
 }
 
 * {
+    font-family: 'Noto Sans Thai';
     padding: 0;
     margin: 0;
 }
@@ -95,6 +96,15 @@
     display: none;  
 }
 
+.choice3 {
+    background-color: rgb(142, 197, 250) ;
+}
+
+
+
+
+
+
 
 
 
@@ -132,6 +142,12 @@
         text-shadow: 0 0 15px rgb(15, 77, 117);
         transition: .3s;
     }
+
+    .menu .choice3 {
+        background: none;
+        text-shadow: 0 0 15px rgb(15, 77, 117);
+    }
+
 
     #check:checked ~ .menu ul {
         transition: .2s;
@@ -206,7 +222,3 @@
 }
 
 
-
-.choice3 {
-    background-color: rgb(142, 197, 250) ;
-}
