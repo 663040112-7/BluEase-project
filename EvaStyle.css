@@ -210,3 +210,10 @@
 .choice1 {
     background-color: rgb(142, 197, 250) ;
 }
+
+.form-submit {
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(-50%);
+}

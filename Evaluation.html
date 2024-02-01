@@ -1,118 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แบบประเมิน</title>
+  <head>
+    <!-- your existing head content -->
     <script src="https://kit.fontawesome.com/274a0dc0b6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="EvaStyle.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('formqsys').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevents the default form submission
+                calculateScore(); // Calls the function to calculate the score
+            });
+        });
+
+        function calculateScore() {
+            // Define your question IDs and their corresponding values
+            const questionValues = {
+                'es_id1': getValue('es_id1'),
+                'es_id2': getValue('es_id2'),
+                'es_id3': getValue('es_id3'),
+                'es_id4': getValue('es_id4'),
+                'es_id5': getValue('es_id5'),
+                'es_id6': getValue('es_id6'),
+                'es_id7': getValue('es_id7'),
+                'es_id8': getValue('es_id8'),
+                'es_id9': getValue('es_id9')
+            };
+
+            // Calculate the total score
+            let totalScore = 0;
+            for (const key in questionValues) {
+                totalScore += parseInt(questionValues[key]);
+            }
+
+            // Display or use the total score as needed
+            console.log('Total Score:', totalScore);
+
+            // Optionally, you can submit the form programmatically here
+            // document.getElementById('formqsys').submit();
+        }
+
+        function getValue(name) {
+            const selectedOption = document.querySelector('input[name="' + name + '"]:checked');
+            return selectedOption ? parseInt(selectedOption.value) : 0;
+        }
+    </script>
 </head>
 <body>
-  <div class="container">
-    <input type="checkbox" name="" id="check">
-    <nav class="menu">
-        <a class="main" href="Main.html">BluEase</a>
-        <ul>
-            <li><a class ="choice choice1" href="Evaluation.html">แบบประเมิน</a></li>
-            <li><a class ="choice choice2" href="Knowledge.html">คลังความรู้</a></li>
-            <li><a class ="choice choice3" href="Hospital.html">สถานที่รักษา</a></li>
-            <li><a class ="choice choice4" href="Ot.disease.html">โรคที่เกี่ยวข้อง</a></li>
-        </ul>
-        <li>
-            <div class="Search">
-                <input type="text" placeholder="Search...">
-                <a href="">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-        <li>
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-    </nav>
-</div>
-        <div class="col-md-9"> <br />
-            <h1 align="center"> แบบประเมินโรคซึมเศร้า </h1>
-            <h2 align="center"> (เกณฑ์ให้คะแนน : ไม่เลย = 0, มีบางวันหรือไม่บ่อย = 1, มีค่อนข้างบ่อย = 2, มีเกือบทุกวัน = 3)</h2>
-            <h3> ข้อมูลอ้างอิงมาจาก : </h3>
-
-         <form id="formqsys" name="formqsys" method="post" action="s_q_db.php">
-     <table width="70%" border="1" align="center" cellpadding="0" cellspacing="0" class="table table-bordered table-hover">
-             <tr>
-               <td width="75%" rowspan="2" align="center">
-               <br>
-               <strong>หัวข้อการประเมิน</strong>
-               </td>
-             </tr>
-             <tr>
-               <td width="5%" align="center"><strong>0</strong></td>
-               <td width="5%" align="center"><strong>1</strong></td>
-               <td width="5%" align="center"><strong>2</strong></td>
-               <td width="5%" align="center"><strong>3</strong></td>
-             </tr>
-             <tr>
-               <td height="30">&nbsp; 1.เบื่อ ทำอะไร ๆ ก็ไม่เพลิดเพลิน</td>
-               <td height="30" align="center"><input type="radio" name="es_id1"  value="0"  required /></td>
-               <td height="30" align="center"><input type="radio" name="es_id1"  value="1"  /></td>
-               <td height="30" align="center"><input type="radio" name="es_id1"  value="2" /></td>
-               <td height="30" align="center"><input type="radio" name="es_id1"  value="3" /></td>
-             </tr>
-             <tr>
-               <td height="30">&nbsp; 2.ไม่สบายใจ ซึมเศร้า หรือท้อแท้</td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id2"  value="0" required /></td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id2"  value="1"/></td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id2"  value="2"/></td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id2"  value="3"/></td>
-             </tr>
-             <tr>
-               <td height="30">&nbsp; 3.หลับยาก หรือหลับ ๆ ตื่น ๆ หรือหลับมากไป</td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id3"  value="0" required /></td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id3"  value="1"/></td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id3"  value="2"/></td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id3"  value="3"/></td>
-             </tr>
-             <tr>
-               <td height="30">&nbsp; 4.เหนื่อยง่าย หรือไม่ค่อยมีแรง</td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id4"  value="0" required /></td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id4"  value="1"/></td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id4"  value="2"/></td>
-               <td width="5%" height="30" align="center"><input type="radio" name="es_id4"  value="3"/></td>
-             </tr>
-             <tr>
-               <td height="30">&nbsp; 5.เบื่ออาหาร หรือกินมากเกินไป</td>
-               <td height="30" align="center"><input type="radio" name="es_id5"  value="0" required /></td>
-               <td height="30" align="center"><input type="radio" name="es_id5"  value="1"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id5"  value="2"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id5"  value="3"/></td>
-             </tr>
-             <tr>
-               <td height="30">&nbsp; 6.รู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว หรือเป็นคนทำให้ตัวเอง หรือครอบครัวผิดหวัง</td>
-               <td height="30" align="center"><input type="radio" name="es_id6"  value="0" required /></td>
-               <td height="30" align="center"><input type="radio" name="es_id6"  value="1"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id6"  value="2"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id6"  value="3"/></td>
-             </tr>
-             <tr>
-               <td height="30">&nbsp; 7.สมาธิไม่ดีเวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานท่ีต้องใช้ความตั้งใจ</td>
-               <td height="30" align="center"><input type="radio" name="es_id7" value="0" required /></td>
-               <td height="30" align="center"><input type="radio" name="es_id7"  value="1"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id7"  value="2"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id7"  value="3"/></td>
-             </tr>
-             <tr>
-               <td height="30">&nbsp; 8.พูดหรือทำอะไรช้าจนคนอื่นมองเห็น หรือกระสับกระส่ายจนท่านอยู่ไม่นิ่งเหมือนเคย</td>
-               <td height="30" align="center"><input type="radio" name="es_id8"  value="0" required /></td>
-               <td height="30" align="center"><input type="radio" name="es_id8"  value="1"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id8"  value="2"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id8"  value="3"/></td>
-             </tr>
-             <tr>
-               <td height="30">&nbsp; 9.คิดทำร้ายตนเอง หรือคิดว่าถ้าตาย ๆ ไปเสียคงจะดี</td>
-               <td height="30" align="center"><input type="radio" name="es_id9"  value="0" required /></td>
-               <td height="30" align="center"><input type="radio" name="es_id9" value="1"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id9" value="2"/></td>
-               <td height="30" align="center"><input type="radio" name="es_id9" value="3"/></td>
-             </tr>
+    <div class="container">
+        <input type="checkbox" name="" id="check">
+        <nav class="menu">
+            <a class="main" href="Main.html">BluEase</a>
+            <ul>
+                <li><a class="choice choice1" href="Evaluation.html">แบบประเมิน</a></li>
+                <li><a class="choice choice2" href="Knowledge.html">คลังความรู้</a></li>
+                <li><a class="choice choice3" href="Hospital.html">สถานที่รักษา</a></li>
+                <li><a class="choice choice4" href="Ot.disease.html">โรคที่เกี่ยวข้อง</a></li>
+            </ul>
+            <li>
+                <div class="Search">
+                    <input type="text" placeholder="Search...">
+                    <a href="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            <li>
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+        </nav>
     </div>
-</body>
-</html>
+    <div class="col-md-9"> <br />
+        <h1 align="center"> แบบประเมินโรคซึมเศร้า </h1>
+        <h2 align="center"> (เกณฑ์ให้คะแนน : ไม่เลย = 0, มีบางวันหรือไม่บ่อย = 1, มีค่อนข้างบ่อย = 2, มีเกือบทุกวัน = 3)</h2>
+        <h3> ข้อมูลอ้างอิงมาจาก : </h3>
+
+        <form id="formqsys" name="formqsys" method="post" action="s_q_db.php">
+            <table width="70%" border="1" align="center" cellpadding="0" cellspacing="0" class="table table-bordered table-hover">
+                <tr>
+                    <td width="75%" rowspan="2" align="center">
+                    <br>
+                    <strong>หัวข้อการประเมิน</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="5%" align="center"><strong>0</strong></td>
+                    <td width="5%" align="center"><strong>1</strong></td>
+                    <td width="5%" align="center"><strong>2</strong></td>
+                    <td width="5%" align="center"><strong>3</strong></td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp; 1.เบื่อ ทำอะไร ๆ ก็ไม่เพลิดเพลิน</td>
+                    <td height="30" align="center"><input type="radio" name="es_id1"  value="0"  required /></td>
+                    <td height="30" align="center"><input type="radio" name="es_id1"  value="1"  /></td>
+                    <td height="30" align="center"><input type="radio" name="es_id1"  value="2" /></td>
+                    <td height="30" align="center"><input type="radio" name="es_id1"  value="3" /></td>
+                </tr>
+                <tr>
+                    <td height="30">&nbsp; 2.ไม่สบายใจ ซึมเศร้า หรือท้อแท้</td>
+                    <td width="5%" height="30" align="center"><input type="radio" name="es_id2"  value="0" required /></td>
+                    <td width="5%" height="30" align="center"><input type="radio" name="es_id2"  value="1"/></td>
+                    <td width="5%" height="30" align="center"><input type="radio" name="es_id2"  value="2"/></td>
+                    <td width="5%" height="30" align="center"><input type="radio" name="es_id2"  value="3"/></td>
+                </tr>
+                <tr>
+                  <td height="30">&nbsp; 3.หลับยาก หรือหลับ ๆ ตื่น ๆ หรือหลับมากไป</td>
+                  <td width="5%" height="30" align="center"><input type="radio" name="es_id3"  value="0" required /></td>
+                  <td width="5%" height="30" align="center"><input type="radio" name="es_id3"  value="1"/></td>
+                  <td width="5%" height="30" align="center"><input type="radio" name="es_id3"  value="2"/></td>
+                  <td width="5%" height="30" align="center"><input type="radio" name="es_id3"  value="3"/></td>
+                </tr>
+                <tr>
+                  <td height="30">&nbsp; 4.เหนื่อยง่าย หรือไม่ค่อยมีแรง</td>
+                  <td width="5%" height="30" align="center"><input type="radio" name="es_id4"  value="0" required /></td>
+                  <td width="5%" height="30" align="center"><input type="radio" name="es_id4"  value="1"/></td>
+                  <td width="5%" height="30" align="center"><input type="radio" name="es_id4"  value="2"/></td>
+                  <td width="5%" height="30" align="center"><input type="radio" name="es_id4"  value="3"/></td>
+                </tr>
+                <tr>
+                  <td height="30">&nbsp; 5.เบื่ออาหาร หรือกินมากเกินไป</td>
+                  <td height="30" align="center"><input type="radio" name="es_id5"  value="0" required /></td>
+                  <td height="30" align="center"><input type="radio" name="es_id5"  value="1"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id5"  value="2"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id5"  value="3"/></td>
+                </tr>
+                <tr>
+                  <td height="30">&nbsp; 6.รู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว หรือเป็นคนทำให้ตัวเอง หรือครอบครัวผิดหวัง</td>
+                  <td height="30" align="center"><input type="radio" name="es_id6"  value="0" required /></td>
+                  <td height="30" align="center"><input type="radio" name="es_id6"  value="1"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id6"  value="2"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id6"  value="3"/></td>
+                </tr>
+                <tr>
+                  <td height="30">&nbsp; 7.สมาธิไม่ดีเวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานท่ีต้องใช้ความตั้งใจ</td>
+                  <td height="30" align="center"><input type="radio" name="es_id7" value="0" required /></td>
+                  <td height="30" align="center"><input type="radio" name="es_id7"  value="1"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id7"  value="2"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id7"  value="3"/></td>
+                </tr>
+                <tr>
+                  <td height="30">&nbsp; 8.พูดหรือทำอะไรช้าจนคนอื่นมองเห็น หรือกระสับกระส่ายจนท่านอยู่ไม่นิ่งเหมือนเคย</td>
+                  <td height="30" align="center"><input type="radio" name="es_id8"  value="0" required /></td>
+                  <td height="30" align="center"><input type="radio" name="es_id8"  value="1"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id8"  value="2"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id8"  value="3"/></td>
+                </tr>
+                <tr>
+                  <td height="30">&nbsp; 9.คิดทำร้ายตนเอง หรือคิดว่าถ้าตาย ๆ ไปเสียคงจะดี</td>
+                  <td height="30" align="center"><input type="radio" name="es_id9"  value="0" required /></td>
+                  <td height="30" align="center"><input type="radio" name="es_id9" value="1"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id9" value="2"/></td>
+                  <td height="30" align="center"><input type="radio" name="es_id9" value="3"/></td>
+                </tr>
+               <form id="formqsys" name="formqsys" method="post" action="s_q_db.php">
+                <input type="submit" value="Submit">
+               </form>
+              </div>
+            </body>
+            </html>
