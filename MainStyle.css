@@ -107,7 +107,7 @@
     }
 
     .menu ul{
-        position: fixed;
+        position: absolute;
         width: 200px;
         height: 260px;
         background:rgb(193, 228, 251);
