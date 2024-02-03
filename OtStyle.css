@@ -1,19 +1,4 @@
-.choice4 {
-    background-color: rgb(142, 197, 250) ;
+#youtube{
+    color: white;
+    background-color: rgb(58, 93, 127);
 }
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 870px) {
-    .menu .choice4 {
-        background: none;
-        text-shadow: 0 0 15px rgb(15, 77, 117);
-    }
-} 
