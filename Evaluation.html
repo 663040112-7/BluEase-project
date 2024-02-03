@@ -2,136 +2,171 @@
 <html lang="en">
 
 <head>
-  <!-- your existing head content -->
-  <script src="https://kit.fontawesome.com/274a0dc0b6.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="EvaStyle.css">
-  <script src="EvaCalculate.js"></script>
+    <!-- your existing head content -->
+    <script src="https://kit.fontawesome.com/274a0dc0b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="EvaStyle.css">
+    <link rel="stylesheet" href="MainStyle.css">
+    <script src="EvaCalculate.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <input type="checkbox" name="" id="check">
-    <nav class="menu">
-      <a class="main" href="Main.html">BluEase</a>
-      <ul>
-        <li><a class="choice choice1" href="Evaluation.html">แบบประเมิน</a></li>
-        <li><a class="choice choice2" href="Knowledge.html">คลังความรู้</a></li>
-        <li><a class="choice choice3" href="Hospital.html">สถานที่รักษา</a></li>
-        <li><a class="choice choice4" href="Ot.disease.html">โรคที่เกี่ยวข้อง</a></li>
-      </ul>
-      <li>
-        <div class="Search">
-          <input type="text" placeholder="Search...">
-          <a href="">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </a>
-        </div>
-      <li>
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-    </nav>
-  </div>
-  <div class="col-md-9"> <br />
-    <h1> แบบประเมินโรคซึมเศร้า </h1>
-    <h2> (เกณฑ์ให้คะแนน : ไม่เลย = 0, มีบางวันหรือไม่บ่อย = 1, มีค่อนข้างบ่อย = 2, มีเกือบทุกวัน = 3)</h2>
-    <h3> ข้อมูลอ้างอิงมาจาก :
-      <a href="https://www.rama.mahidol.ac.th/th/depression_risk" target="_blank">
-        แบบทดสอบภาวะซึมเศร้า PHQ-9 มหาวิทยาลัยมหิดล
-      </a>
-    </h3>
+    <div class="container">
+        <input type="checkbox" name="" id="check">
+        <nav class="menu">
+            <a class="main" href="Main.html">BluEase</a>
+            <ul>
+                <li><a class="choice choice1" href="Evaluation.html">แบบประเมิน</a></li>
+                <li><a class="choice choice2" href="Kn_Youtube.html">คลังความรู้</a></li>
+                <li><a class="choice choice3" href="Hospital.html">สถานที่รักษา</a></li>
+                <li><a class="choice choice4" href="Ot.disease.html">โรคที่เกี่ยวข้อง</a></li>
+            </ul>
+            <li>
+                <div class="Search">
+                    <input type="text" placeholder="Search...">
+                    <a href="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            <li>
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+        </nav>
+    </div>
+    <div class="col-md-9"> <br />
+        <h1> แบบประเมินโรคซึมเศร้า </h1>
+        <h2> (เกณฑ์ให้คะแนน : ไม่เลย = 0, มีบางวันหรือไม่บ่อย = 1, มีค่อนข้างบ่อย = 2, มีเกือบทุกวัน = 3)</h2>
+        <h3> ข้อมูลอ้างอิงมาจาก :
+            <a href="https://www.rama.mahidol.ac.th/th/depression_risk" target="_blank">
+                แบบทดสอบภาวะซึมเศร้า PHQ-9 มหาวิทยาลัยมหิดล
+            </a>
+        </h3>
 
-    <form id="formqsys" name="formqsys" method="post" action="s_q_db.php">
-      <table>
+        <form id="formqsys" name="formqsys" method="post" action="s_q_db.php">
+            <table>
+                <tr class="form form-choice1">
+                    <td>&nbsp; 1.เบื่อ ทำอะไร ๆ ก็ไม่เพลิดเพลิน
+                        <div>
+                            <input class="slider slider1" type="range" max="3" min="0" value="0"
+                                onmousemove="rangeSlider1(this.value)">
+                                <span id="rangeValue1" class="rangeValue">0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="form form-choice2">
+                    <td>&nbsp; 2.ไม่สบายใจ ซึมเศร้า หรือท้อแท้
+                        <div>
+                            <input class="slider slider2" type="range" max="3" min="0" value="0"
+                                onmousemove="rangeSlider2(this.value)">
+                            <span id="rangeValue2" class="rangeValue">0</span>
+                            <div>
+                    </td>
+                </tr>
+                <tr class="form form-choice3">
+                    <td>&nbsp; 3.หลับยาก หรือหลับ ๆ ตื่น ๆ หรือหลับมากไป
+                        <div>
+                            <input class="slider slider3" type="range" max="3" min="0" value="0"
+                                onmousemove="rangeSlider3(this.value)">
+                            <span id="rangeValue3" class="rangeValue">0</span>
+                            <div>
+                    </td>
+                </tr>
+                <tr class="form form-choice4">
+                    <td>&nbsp; 4.เหนื่อยง่าย หรือไม่ค่อยมีแรง
+                        <div>
+                            <input class="slider slider4" type="range" max="3" min="0" value="0"
+                                onmousemove="rangeSlider4(this.value)">
+                            <span id="rangeValue4" class="rangeValue">0</span>
+                            <div>
+                </tr>
+                <tr class="form form-choice5">
+                    <td>&nbsp; 5.เบื่ออาหาร หรือกินมากเกินไป
+                        <div>
+                            <input class="slider slider5" type="range" max="3" min="0" value="0"
+                                onmousemove="rangeSlider5(this.value)">
+                            <span id="rangeValue5" class="rangeValue">0</span>
+                            <div>
+                    </td>
+                </tr>
+                <tr class="form form-choice6">
+                    <td>&nbsp; 6.รู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว หรือเป็นคนทำให้ตัวเอง หรือครอบครัวผิดหวัง
+                        <div>
+                            <input class="slider slider6" type="range" max="3" min="0" value="0"
+                                onmousemove="rangeSlider6(this.value)">
+                            <span id="rangeValue6" class="rangeValue">0</span>
+                            <div>
+                    </td>
+                </tr>
+                <tr class="form form-choice7">
+                    <td>&nbsp; 7.สมาธิไม่ดีเวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานที่ต้องใช้ความตั้งใจ
+                        <div>
+                            <input class="slider slider7" type="range" max="3" min="0" value="0"
+                                onmousemove="rangeSlider7(this.value)">
+                            <span id="rangeValue7" class="rangeValue">0</span>
+                            <div>
+                    </td>
+                </tr>
+                <tr class="form form-choice8">
+                    <td>&nbsp; 8.พูดหรือทำอะไรช้าจนคนอื่นมองเห็น หรือกระสับกระส่ายจนท่านอยู่ไม่นิ่งเหมือนเคย
+                        <div>
+                            <input class="slider slider8" type="range" max="3" min="0" value="0"
+                                onmousemove="rangeSlider8(this.value)">
+                            <span id="rangeValue8" class="rangeValue">0</span>
+                            <div>
+                    </td>
+                </tr>
+                <tr class="form form-choice9">
+                    <td>&nbsp; 9.คิดทำร้ายตนเอง หรือคิดว่าถ้าตาย ๆ ไปเสียคงจะดี
+                        <div>
+                            <input class="slider slider9" type="range" max="3" min="0" value="0"
+                                onmousemove="rangeSlider9(this.value)">
+                            <span id="rangeValue9" class="rangeValue">0</span>
+                            <div>
+                    </td>
+                </tr>
+                <script>
+                    function rangeSlider1(value) {
+                        document.getElementById('rangeValue1').innerHTML = value;
+                    }
+                    function rangeSlider2(value) {
+                        document.getElementById('rangeValue2').innerHTML = value;
+                    }
 
-        <tr class="form form-choice1">
-          <td>&nbsp; 1.เบื่อ ทำอะไร ๆ ก็ไม่เพลิดเพลิน<input class="slider slider1" type="range" max="3" min="0"
-              value="0" onmousemove="rangeSlider1(this.value)"></td>
-          <span id="rangeValue1">0</span>
-        </tr>
-        <tr class="form form-choice2">
-          <td>&nbsp; 2.ไม่สบายใจ ซึมเศร้า หรือท้อแท้<input class="slider slider2" type="range" max="3" min="0" value="0"
-              onmousemove="rangeSlider2(this.value)"></td>
-          <span id="rangeValue2">0</span>
-        </tr>
-        <tr class="form form-choice3">
-          <td>&nbsp; 3.หลับยาก หรือหลับ ๆ ตื่น ๆ หรือหลับมากไป<input class="slider slider3" type="range" max="3" min="0"
-              value="0" onmousemove="rangeSlider3(this.value)"></td>
-          <span id="rangeValue3">0</span>
-        </tr>
-        <tr class="form form-choice4">
-          <td>&nbsp; 4.เหนื่อยง่าย หรือไม่ค่อยมีแรง<input class="slider slider4" type="range" max="3" min="0" value="0"
-              onmousemove="rangeSlider4(this.value)"></td>
-          <span id="rangeValue4">0</span>
-        </tr>
-        <tr class="form form-choice5">
-          <td>&nbsp; 5.เบื่ออาหาร หรือกินมากเกินไป<input class="slider slider5" type="range" max="3" min="0" value="0"
-              onmousemove="rangeSlider5(this.value)"></td>
-          <span id="rangeValue5">0</span>
-        </tr>
-        <tr class="form form-choice6">
-          <td>&nbsp; 6.รู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว หรือเป็นคนทำให้ตัวเอง หรือครอบครัวผิดหวัง<input
-              class="slider slider6" type="range" max="3" min="0" value="0" onmousemove="rangeSlider6(this.value)"></td>
-          <span id="rangeValue6">0</span>
-        </tr>
-        <tr class="form form-choice7">
-          <td>&nbsp; 7.สมาธิไม่ดีเวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานที่ต้องใช้ความตั้งใจ<input
-              class="slider slider7" type="range" max="3" min="0" value="0" onmousemove="rangeSlider7(this.value)"></td>
-          <span id="rangeValue7">0</span>
-        </tr>
-        <tr class="form form-choice8">
-          <td>&nbsp; 8.พูดหรือทำอะไรช้าจนคนอื่นมองเห็น หรือกระสับกระส่ายจนท่านอยู่ไม่นิ่งเหมือนเคย<input
-              class="slider slider8" type="range" max="3" min="0" value="0" onmousemove="rangeSlider8(this.value)"></td>
-          <span id="rangeValue8">0</span>
-        </tr>
-        <tr class="form form-choice9">
-          <td>&nbsp; 9.คิดทำร้ายตนเอง หรือคิดว่าถ้าตาย ๆ ไปเสียคงจะดี<input class="slider slider9" type="range" max="3"
-              min="0" value="0" onmousemove="rangeSlider9(this.value)"></td>
-          <span id="rangeValue9">0</span>
-        </tr>
-        <script>
-          function rangeSlider1(value) {
-            document.getElementById('rangeValue1').innerHTML = value;
-          }
-          function rangeSlider2(value) {
-            document.getElementById('rangeValue2').innerHTML = value;
-          }
+                    function rangeSlider3(value) {
+                        document.getElementById('rangeValue3').innerHTML = value;
+                    }
 
-          function rangeSlider3(value) {
-            document.getElementById('rangeValue3').innerHTML = value;
-          }
+                    function rangeSlider4(value) {
+                        document.getElementById('rangeValue4').innerHTML = value;
+                    }
 
-          function rangeSlider4(value) {
-            document.getElementById('rangeValue4').innerHTML = value;
-          }
+                    function rangeSlider5(value) {
+                        document.getElementById('rangeValue5').innerHTML = value;
+                    }
 
-          function rangeSlider5(value) {
-            document.getElementById('rangeValue5').innerHTML = value;
-          }
+                    function rangeSlider6(value) {
+                        document.getElementById('rangeValue6').innerHTML = value;
+                    }
 
-          function rangeSlider6(value) {
-            document.getElementById('rangeValue6').innerHTML = value;
-          }
+                    function rangeSlider7(value) {
+                        document.getElementById('rangeValue7').innerHTML = value;
+                    }
 
-          function rangeSlider7(value) {
-            document.getElementById('rangeValue7').innerHTML = value;
-          }
+                    function rangeSlider8(value) {
+                        document.getElementById('rangeValue8').innerHTML = value;
+                    }
 
-          function rangeSlider8(value) {
-            document.getElementById('rangeValue8').innerHTML = value;
-          }
-
-          function rangeSlider9(value) {
-            document.getElementById('rangeValue9').innerHTML = value;
-          }
-        </script>
-      </table>
-      <form id="formqsys" name="formqsys" method="post" action="s_q_db.php">
-        <input id="submitBtn" type="submit" value="ส่งแบบประเมิน">
-        <button id="calculateBtn">Calculate Score</button>
-        <p id="totalScore"></p>
-      </form>
-  </div>
+                    function rangeSlider9(value) {
+                        document.getElementById('rangeValue9').innerHTML = value;
+                    }
+                </script>
+            </table>
+            <form id="formqsys" name="formqsys" method="post" action="s_q_db.php">
+                <input id="submitBtn" type="submit" value="ส่งแบบประเมิน">
+                <button id="calculateBtn">Calculate Score</button>
+                <p id="totalScore"></p>
+            </form>
+    </div>
 </body>
 
 </html>

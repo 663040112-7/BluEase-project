@@ -1,18 +1,21 @@
 .allCard{
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    text-align: right;
-    margin: 0;
+    margin: 30px;
 }
 .allCard .card {
+    border-style: groove;
+    border-width:2px;
+    border-color: rgb(174, 214, 241);
+    background-color: rgb(232, 246, 255);
     display: flex;
     flex-direction: column;
-    padding: 30px;
     flex: 1;
-    margin: 20px;
-    box-shadow: 0 0 15px grey;
+    padding: 30px; 
+    box-shadow: 0 0 15px rgb(184, 220, 244);
     border-radius: 15px;
+    text-align: right;
+    margin: 40px 80px;
 }
 
 .allCard .card img{
@@ -20,15 +23,17 @@
     border-color:  rgb(184, 202, 229);
     align-self: center;
     width: auto;
-    height: 200px;
+    height: 150px;
 }
 
 .allCard .card a{
     text-align: center;
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: black;
 }
 
-
+.allCard .card p {
+    font-size: .9rem;
+}

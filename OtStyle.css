@@ -2,7 +2,57 @@
     background-color: rgb(142, 197, 250) ;
 }
 
+.allCardOt{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    text-align: right;
+    margin: 0;
+}
 
+.allCardOt .cardBlock {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    flex-direction: column;
+    padding: 10px;
+    flex: 1;
+    margin-top: 5px;
+}
+
+.allCardOt .cardBlock .cardOt {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    flex: 1;
+    margin: 20px;
+    box-shadow: 0 0 15px grey;
+    border-radius: 15px;
+}
+
+.allCardOt .cardOt img{
+    border-style:groove;
+    border-color:  rgb(184, 202, 229);
+    align-self: center;
+    width: auto;
+    height: 200px;
+}
+
+.allCardOt .cardOt a{
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.allCardOt  .searchBar {
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    text-align: right;
+    margin-top: 35px;
+    margin-right: 25px;
+}
 
 
 
