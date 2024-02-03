@@ -29,7 +29,7 @@
     position: absolute;
     left: 25px;
     margin-left: 20px;
-    font-size: 27px;
+    font-size: 29px;
     font-weight: bold;
     font-family: 'Baloo Bhai';
     color: rgb(54, 48, 98);
@@ -39,7 +39,7 @@
 
 .menu li a{
     margin:10px;
-    font-size: 17px;
+    font-size: 19px;
     font-family: 'Noto Sans Thai';
     color: rgb(54, 48, 98);
     padding: 1.25rem 1rem 1.26rem;
@@ -101,23 +101,27 @@
 
 
 
-@media (max-width: 870px) {
+@media (max-width: 900px) {
     .checkbtn{
         display: block;
     }
 
+    html{
+        overflow-x: hidden;
+    }
+
     .menu ul{
-        position: fixed;
+        position: absolute;
         width: 200px;
         height: 260px;
-        background:rgb(193, 228, 251);
+        background:rgb(184, 223, 249);
         top: 80px;
         right: .8rem;
         text-align: center;
         transition: all .5s;
         border-top-right-radius: 25px;
         border-bottom-left-radius: 25px;
-        box-shadow: 0px 0px 15px rgb(202, 211, 222);
+        box-shadow: 0px 0px 15px rgb(177, 184, 194);
         transform: translateX(130%);
     }
     .menu ul a{

@@ -1,107 +1,34 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo Bhai');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap');
-
-.container {
-    background-color: white;
-    background-size: cover;
-}
-
-* {
-    font-family: 'Noto Sans Thai';
-    padding: 0;
-    margin: 0;
-}
-
-.menu {
-    background-color: rgb(227, 241, 255);
-    padding: 15px 20px;
-    height: 35px;
-    border-radius: 25px;
-    box-shadow: 0px 0px 15px rgb(187, 194, 203);
-    margin: 7px;
-
-    display: flex;
-    align-items: center;
-    justify-content: right;
-}
-
-.menu .main {
-    position: absolute;
-    left: 25px;
-    margin-left: 20px;
-    font-size: 27px;
-    font-weight: bold;
-    font-family: 'Baloo Bhai';
-    color: rgb(54, 48, 98);
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.menu li a{
-    margin:10px;
-    font-size: 17px;
-    font-family: 'Noto Sans Thai';
-    color: rgb(54, 48, 98);
-    padding: 1.25rem 1rem 1.26rem;
-}
-
-.menu ul li a:hover {
-    background-color: rgb(142, 197, 250);
-    transition: 0.5s;
-}
-
-.menu li a:active {
-    background-color: rgb(109, 156, 199);
-}
-
-.menu li {
-    list-style: none;
-    display: inline-block;
-    margin: 0px;
-}
-
-.Search:hover input{
-    width: 100px;
-}
-
-.Search input{
-    width: 0;
-    outline: none;
-    border: none;
-    font-weight: 500;
-    transition: 0.8s;
-    background: transparent;
-}
-
-.Search a .fas{
-    color: rgb(142, 197, 250);
-}
-.Search:hover{
-    transition: .3s;
-    text-shadow: 0 0 20px rgb(136, 165, 184);
-}
-
-#check{
-    display: none;
-}
-.checkbtn{
-    margin: 7px 0px 7px;
-    font-size: 3rem;
-    font-size: 1.5rem;
-    color: rgb(54, 48, 98);
-    padding: .5rem 1rem;
-    border-radius: .5rem ;
-    border: .1rem solid rgba(33, 97, 140,.2);
-    cursor: pointer;  
-    display: none;  
-}
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 .choice2 {
     background-color: rgb(142, 197, 250) ;
 }
 
+.Knowledge-choice {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
 
+.Knowledge-choice a {
+    text-decoration: none;
+    color: rgb(54, 48, 98);
+    padding: 8px ;
+    background-color: rgb(146, 199, 253);
+    width: 25%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgb(187, 194, 203);
+    text-align: center;
+    font-family: "kanit";
+    font-size: 19px;
+}
 
+.Knowledge-choice a:hover {
+    cursor: pointer;
+    transition: .2s;
+    color: white;
+    background-color: rgb(58, 93, 127);
+}
 
 
 
@@ -109,113 +36,8 @@
 
 
 @media (max-width: 870px) {
-    .checkbtn{
-        display: block;
-    }
-
-    .menu ul{
-        position: fixed;
-        width: 200px;
-        height: 260px;
-        background:rgb(193, 228, 251);
-        top: 80px;
-        right: .8rem;
-        text-align: center;
-        transition: all .5s;
-        border-top-right-radius: 25px;
-        border-bottom-left-radius: 25px;
-        box-shadow: 0px 0px 15px rgb(202, 211, 222);
-        transform: translateX(130%);
-    }
-    .menu ul a{
-        font-size: 18px;
-        margin:.5rem ;
-        padding:.5rem;
-        display: block;
-    }
-
-    .menu ul li a:hover{
-        background: none;
-        color: white;
-        text-shadow: 0 0 15px rgb(15, 77, 117);
-        transition: .3s;
-    }
-
     .menu .choice2 {
         background: none;
         text-shadow: 0 0 15px rgb(15, 77, 117);
     }
-
-    #check:checked ~ .menu ul {
-        transition: .2s;
-        transform: translateX(0%);
-    }
 } 
-
-@media(max-width: 400px) {
-    .checkbtn{
-        margin: 0px;
-        padding: .5rem ;
-        font-size: 1rem;
-    }
-
-    .menu .main{
-        margin-left: 10px;
-        font-size: 1.2rem;
-    }
-
-    .menu ul {
-        width: 40%;
-        height: 180px;
-        top: 80px;
-    }
-
-    .menu ul li a{
-        margin:.2rem ;
-    }
-
-    .menu li a {
-        font-size: small;
-    }
-}
-
-@media (max-width: 300px),(max-height: 400px){
-    .checkbtn{
-        padding: .3rem ;
-        font-size: .8rem;
-    }
-    .menu {
-        box-shadow: 0px 0px 15px rgb(198, 205, 214);
-        height: 1.2rem;
-    }
-    .menu .main{
-        font-size: 1rem;
-    }
-
-    .menu ul {
-        width: 110px;
-        height: 120px;
-        top: 60px;
-    }
-
-    .menu ul li a{
-        margin:0 ;
-        padding:.3rem;
-        display: block;
-    }
-
-    .menu li a {
-        font-size: .7rem;
-    }
-
-    .Search:hover input{
-        width: 40px;
-    }
-    
-    .Search input{
-        font-size: 10px;
-        font-weight: 300;
-    }
-}
-
-
