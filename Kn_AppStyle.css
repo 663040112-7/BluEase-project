@@ -3,4 +3,44 @@
     background-color: rgb(58, 93, 127);
 }
 
+.allCard .card {
+    margin: 40px 50px !important;
+    padding : 20px 80px !important;
+}
 
+.allCard .card img{
+    height: 100px !important;
+    border-radius: 13px;
+}
+
+.allCard .card h2{
+    margin: 10px -20%;
+    font-size: 1rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.allCard .card div{
+    position:relative;
+    left: -25%;
+    width: 150%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.allCard .card div a {
+    font-size: 13px;
+    padding: 5px;
+}
+
+.allCard .card div a i {
+    color: rgb(42, 78, 115);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.allCard .card div a:hover{
+    background-color: pink;
+}
