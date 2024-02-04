@@ -2,6 +2,93 @@
     background-color: rgb(142, 197, 250) ;
 }
 
+.container h1{
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(54, 48, 98);
+    font-size: 1.7rem;
+}
+
+.container .address{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.container .address div{
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.container .address .SearchAddress{
+    display: flex;
+}
+.container .address .SearchAddress input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 20px;
+    background-color: rgb(205, 230, 255);
+    border: 1px solid rgb(127, 161, 196);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(184, 220, 244);
+    font-size: 1rem;
+}
+
+.container .address .SearchAddress input:focus{
+    border: 1px solid rgb(153, 183, 212);
+}
+
+.container .address .SearchAddress .fa-magnifying-glass{
+    font-size: 20px;
+
+}
+
+.container .map {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 30px;
+   justify-content: space-around;
+}
+
+.container .map .mappic{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .map .mappic img {
+    width: 600px;
+    height: 350px;
+    border-style:groove;
+    border-color:  rgb(184, 202, 229);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(194, 223, 242);
+}
+
+.container .map .mappic a {
+    align-self: center;
+    margin: 20px;
+    font-size: 20px;
+    color: rgb(94, 86, 152);
+}
+
+.container .map .map-info{
+    margin-left: 10%;
+    width: 400px;
+    height: 400px;    
+    padding: 10px 5%;
+    border-radius: 10px;
+}
+
+.container .map .map-info h1{
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.container .map .map-info p{
+    margin: 10px;
+    margin-left: 0;
+    font-size: 20px;
+}
+
 
 
 
