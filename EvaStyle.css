@@ -68,9 +68,9 @@ table td div{
 }
 
 #submitBtn {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 10px 50px;
     border-radius: 15px;
     background-color: rgb(124, 190, 252);
     box-shadow: 0 0 15px rgb(74, 156, 210);
