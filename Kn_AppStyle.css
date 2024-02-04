@@ -42,8 +42,9 @@
 }
 
 .allCard .card div a:hover{
-    background-color: pink;
+    text-shadow: 0px 0px 15px rgb(187, 194, 203);
 }
+
 .allCard .card {
     padding : 40px 80px !important;
 }
@@ -79,8 +80,4 @@
     color: rgb(42, 78, 115);
     font-size: 20px;
     margin-right: 5px;
-}
-
-.allCard .card div a:hover{
-    background-color: pink;
 }
