@@ -5,7 +5,7 @@
 
 .col-md-9 h1 {
     background-color: rgb(194, 225, 255);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     width: 350px;
     padding: 10px;
     text-align: center;
@@ -20,7 +20,7 @@
 .col-md-9 h2 {
     background-color: rgb(255, 205, 205);
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 20px 0;
     padding: 20px;
 }
@@ -30,7 +30,7 @@
 }
 
 table {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: auto;
     width: 95%;
 }
