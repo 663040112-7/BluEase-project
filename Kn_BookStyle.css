@@ -3,7 +3,25 @@
     background-color: rgb(58, 93, 127);
 }
 
-#youtube{
-    color: none;
-    background-color: none;
+.allCard .card {
+    margin: 30px 40px !important;
+    padding : 30px 80px !important;
+}
+
+.allCard .card img{
+    height: 200px !important;
+}
+
+.allCard .card a{
+    font-size: 17px !important;
+    margin: 10px;
+    position: relative;
+    display: block;
+    align-self: center;
+    width: 120%;
+
+}
+
+.allCard .card p{
+    font-size: 14px;
 }

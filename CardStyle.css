@@ -1,18 +1,21 @@
 .allCard{
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    text-align: right;
-    margin: 0;
+    margin: 40px;
 }
 .allCard .card {
+    border-style: groove;
+    border-width:2px;
+    border-color: rgb(174, 214, 241);
+    background-color: rgb(232, 246, 255);
     display: flex;
     flex-direction: column;
-    padding: 30px;
     flex: 1;
-    margin: 20px;
-    box-shadow: 0 0 15px grey;
+    padding: 30px; 
+    box-shadow: 0 0 15px rgb(184, 220, 244);
     border-radius: 15px;
+    text-align: right;
+    margin: 20px;
 }
 
 .allCard .card img{
@@ -20,13 +23,13 @@
     border-color:  rgb(184, 202, 229);
     align-self: center;
     width: auto;
-    height: 200px;
+    height: 150px;
 }
 
 .allCard .card a{
     text-align: center;
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: black;
 }
@@ -36,27 +39,55 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     flex-wrap: wrap;
-    text-align: right;
-    margin: 0;
+    margin: 40px;
 }
-
-.allCardOt .cardBlock {
-    display: grid;
-    grid-template-columns: repeat(2, 600px);
-    flex-direction: column;
-    padding: 10px;
-    flex: 1;
-    margin-top: 5px;
-}
-
-.allCardOt .cardBlock .cardOt {
+.allCard .card {
+    border-style: groove;
+    border-width:2px;
+    border-color: rgb(174, 214, 241);
+    background-color: rgb(232, 246, 255);
     display: flex;
     flex-direction: column;
-    padding: 30px;
     flex: 1;
-    margin: 20px;
-    box-shadow: 0 0 15px grey;
+    padding: 30px; 
+    box-shadow: 0 0 15px rgb(184, 220, 244);
     border-radius: 15px;
+    text-align: right;
+    margin: 20px;
+}
+
+.allCard .card img{
+    border-style:groove;
+    border-color:  rgb(184, 202, 229);
+    align-self: center;
+    width: auto;
+    height: 150px;
+}
+
+.allCard .card a{
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
+
+.allCardOt{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.allCard .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 30px; 
+    box-shadow: 0 0 15px rgb(184, 220, 244);
+    border-radius: 15px;
+    text-align: right;
+    margin: 40px 80px;
 }
 
 .allCardOt .cardOt img{
@@ -64,21 +95,15 @@
     border-color:  rgb(184, 202, 229);
     align-self: center;
     width: auto;
-    height: 200px;
+    height: 150px;
 }
 
 .allCardOt .cardOt a{
     text-align: center;
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: black;
 }
 
-.allCardOt  .searchBar {
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    text-align: right;
-    margin-top: 35px;
-    margin-right: 25px;
-}
+
