@@ -43,85 +43,103 @@
         </h3>
 
         <form id="formqsys" name="formqsys" method="post" action="s_q_db.php">
+            <div class="value-box">
+                <div class="value">
+                    <div class="num-of-value value0">0</div>
+                    <div class="num-of-value value1">1</div>
+                    <div class="num-of-value value2">2</div>
+                    <div class="num-of-value value3">3</div>
+                </div>
+            </div>
             <table>
                 <tr class="form form-choice1">
                     <td>&nbsp; 1.เบื่อ ทำอะไร ๆ ก็ไม่เพลิดเพลิน
-                        <div>
-                            <input class="slider slider1" type="range" max="3" min="0" value="0"
-                                onmousemove="rangeSlider1(this.value)">
-                                <span id="rangeValue1" class="rangeValue">0</span>
+                        <div class="radio-button">
+                            <input type="radio" name="choice1" value="0" />
+                            <input type="radio" name="choice1" value="1" />
+                            <input type="radio" name="choice1" value="2" />
+                            <input type="radio" name="choice1" value="3" />
                         </div>
                     </td>
                 </tr>
                 <tr class="form form-choice2">
                     <td>&nbsp; 2.ไม่สบายใจ ซึมเศร้า หรือท้อแท้
-                        <div>
-                            <input class="slider slider2" type="range" max="3" min="0" value="0"
-                                onmousemove="rangeSlider2(this.value)">
-                            <span id="rangeValue2" class="rangeValue">0</span>
-                            <div>
+                        <div class="radio-button">
+                            <input type="radio" name="choice2" value="0" />
+                            <input type="radio" name="choice2" value="1" />
+                            <input type="radio" name="choice2" value="2" />
+                            <input type="radio" name="choice2" value="3" />
+                        </div>
                     </td>
                 </tr>
                 <tr class="form form-choice3">
                     <td>&nbsp; 3.หลับยาก หรือหลับ ๆ ตื่น ๆ หรือหลับมากไป
-                        <div>
-                            <input class="slider slider3" type="range" max="3" min="0" value="0"
-                                onmousemove="rangeSlider3(this.value)">
-                            <span id="rangeValue3" class="rangeValue">0</span>
-                            <div>
+                        <div class="radio-button">
+                            <input type="radio" name="choice3" value="0" />
+                            <input type="radio" name="choice3" value="1" />
+                            <input type="radio" name="choice3" value="2" />
+                            <input type="radio" name="choice3" value="3" />
+                        </div>
                     </td>
                 </tr>
                 <tr class="form form-choice4">
                     <td>&nbsp; 4.เหนื่อยง่าย หรือไม่ค่อยมีแรง
-                        <div>
-                            <input class="slider slider4" type="range" max="3" min="0" value="0"
-                                onmousemove="rangeSlider4(this.value)">
-                            <span id="rangeValue4" class="rangeValue">0</span>
-                            <div>
+                        <div class="radio-button">
+                            <input type="radio" name="choice4" value="0" />
+                            <input type="radio" name="choice4" value="1" />
+                            <input type="radio" name="choice4" value="2" />
+                            <input type="radio" name="choice4" value="3" />
+                        </div>
+                    </td>
                 </tr>
                 <tr class="form form-choice5">
                     <td>&nbsp; 5.เบื่ออาหาร หรือกินมากเกินไป
-                        <div>
-                            <input class="slider slider5" type="range" max="3" min="0" value="0"
-                                onmousemove="rangeSlider5(this.value)">
-                            <span id="rangeValue5" class="rangeValue">0</span>
-                            <div>
+                        <div class="radio-button">
+                            <input type="radio" name="choice5" value="0" />
+                            <input type="radio" name="choice5" value="1" />
+                            <input type="radio" name="choice5" value="2" />
+                            <input type="radio" name="choice5" value="3" />
+                        </div>
                     </td>
                 </tr>
                 <tr class="form form-choice6">
                     <td>&nbsp; 6.รู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว หรือเป็นคนทำให้ตัวเอง หรือครอบครัวผิดหวัง
-                        <div>
-                            <input class="slider slider6" type="range" max="3" min="0" value="0"
-                                onmousemove="rangeSlider6(this.value)">
-                            <span id="rangeValue6" class="rangeValue">0</span>
-                            <div>
+                        <div class="radio-button">
+                            <input type="radio" name="choice6" value="0" />
+                            <input type="radio" name="choice6" value="1" />
+                            <input type="radio" name="choice6" value="2" />
+                            <input type="radio" name="choice6" value="3" />
+                        </div>
                     </td>
                 </tr>
                 <tr class="form form-choice7">
                     <td>&nbsp; 7.สมาธิไม่ดีเวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานที่ต้องใช้ความตั้งใจ
-                        <div>
-                            <input class="slider slider7" type="range" max="3" min="0" value="0"
-                                onmousemove="rangeSlider7(this.value)">
-                            <span id="rangeValue7" class="rangeValue">0</span>
-                            <div>
+                        <div class="radio-button">
+                            <input type="radio" name="choice7" value="0" />
+                            <input type="radio" name="choice7" value="1" />
+                            <input type="radio" name="choice7" value="2" />
+                            <input type="radio" name="choice7" value="3" />
+                        </div>
                     </td>
                 </tr>
                 <tr class="form form-choice8">
                     <td>&nbsp; 8.พูดหรือทำอะไรช้าจนคนอื่นมองเห็น หรือกระสับกระส่ายจนท่านอยู่ไม่นิ่งเหมือนเคย
-                        <div>
-                            <input class="slider slider8" type="range" max="3" min="0" value="0"
-                                onmousemove="rangeSlider8(this.value)">
-                            <span id="rangeValue8" class="rangeValue">0</span>
-                            <div>
+                        <div class="radio-button">
+                            <input type="radio" name="choice8" value="0" />
+                            <input type="radio" name="choice8" value="1" />
+                            <input type="radio" name="choice8" value="2" />
+                            <input type="radio" name="choice8" value="3" />
+                        </div>
                     </td>
                 </tr>
                 <tr class="form form-choice9">
                     <td>&nbsp; 9.คิดทำร้ายตนเอง หรือคิดว่าถ้าตาย ๆ ไปเสียคงจะดี
-                        <div>
-                            <input class="slider slider9" type="range" max="3" min="0" value="0"
-                                onmousemove="rangeSlider9(this.value)">
-                            <span id="rangeValue9" class="rangeValue">0</span>
-                            <div>
+                        <div class="radio-button">
+                            <input type="radio" name="choice9" value="0" />
+                            <input type="radio" name="choice9" value="1" />
+                            <input type="radio" name="choice9" value="2" />
+                            <input type="radio" name="choice9" value="3" />
+                        </div>
                     </td>
                 </tr>
                 <script>
