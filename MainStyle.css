@@ -38,6 +38,7 @@
 }
 
 .menu li a{
+    text-decoration: none;
     margin:10px;
     font-size: 19px;
     font-family: 'Noto Sans Thai';
@@ -46,8 +47,10 @@
 }
 
 .menu ul li a:hover {
+    color: white;
+    text-shadow: 0 0 15px black;
     background-color: rgb(142, 197, 250);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .menu li a:active {
@@ -134,7 +137,7 @@
     .menu ul li a:hover{
         background: none;
         color: white;
-        text-shadow: 0 0 15px rgb(15, 77, 117);
+        text-shadow: 0 0 15px rgb(4, 102, 167);
         transition: .3s;
     }
 
