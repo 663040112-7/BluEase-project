@@ -3,31 +3,24 @@
 }
 
 .allCardOt{
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     flex-wrap: wrap;
-    text-align: right;
-    margin: 0;
+    margin: 40px;
 }
 
-.allCardOt .cardBlock {
-    display: grid;
-    grid-template-columns: repeat(2, 600px);
-    flex-direction: column;
-    padding: 10px;
-    flex: 1;
-    margin-top: 5px;
-}
-
-.allCardOt .cardBlock .cardOt {
+.allCardOt .cardOt {
+    border-style: groove;
+    border-width:2px;
+    border-color: rgb(174, 214, 241);
+    background-color: rgb(232, 246, 255);
     display: flex;
     flex-direction: column;
-    padding: 30px;
     flex: 1;
-    margin: 20px;
-    box-shadow: 0 0 15px grey;
+    padding: 30px; 
+    box-shadow: 0 0 15px rgb(184, 220, 244);
     border-radius: 15px;
+    text-align: right;
+    margin: 20px;
 }
 
 .allCardOt .cardOt img{
@@ -35,30 +28,44 @@
     border-color:  rgb(184, 202, 229);
     align-self: center;
     width: auto;
-    height: 200px;
+    height: 150px;
 }
 
 .allCardOt .cardOt a{
     text-align: center;
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: black;
 }
 
-.allCardOt  .searchBar {
-    box-sizing: border-box;
+.search{
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    text-align: right;
-    margin-top: 35px;
-    margin-right: 25px;
+    align-items: center;
+    margin: 10px;
+    margin-top: 50px;
 }
 
+.search input{
+    padding: 10px;
+    width: 400px;
+    margin-right: 25px;
+    background-color: rgb(205, 230, 255);
+    border: 1px solid rgb(127, 161, 196);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(184, 220, 244);
+    font-size: 1rem;
+}
 
+.search input:focus{
+    border: 1px solid rgb(153, 183, 212);
+}
 
-
-
-
+.search .fa-magnifying-glass{
+    font-size: 20px;
+}
 
 
 @media (max-width: 870px) {
