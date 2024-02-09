@@ -184,10 +184,12 @@
                 </script>
             </table>
             <form id="formqsys" name="formqsys" method="post" action="s_q_db.php">
-                <input id="submitBtn" type="submit" value="ส่งแบบประเมิน">
-                <button id="calculateBtn">Calculate Score</button>
+                <input id="submitBtn" type="button" value="ส่งแบบประเมิน" onclick="showPopup()">
+
                 <p id="totalScore"></p>
             </form>
+
+            <script src="EvaCalculate.js"></script>
     </div>
 </body>
 

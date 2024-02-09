@@ -1,28 +1,32 @@
-// Get the button and score display element
-const calculateBtn = document.getElementById("calculateBtn");
-const totalScoreElement = document.getElementById("totalScore");
+// EvaCalculate.js
 
-// Add an event listener to the button
-calculateBtn.addEventListener("click", calculateScore);
+// Declare totalScore as a global variable
+var totalScore = 0;
 
 function calculateScore() {
-    var sliders = document.querySelectorAll(".slider");
-    var values = [];
-    for (var i = 0; i < sliders.length; i++) {
-      values.push(sliders[i].value);
-    }
-    
-    // Calculate the total score by adding up the values of all the sliders.
-    var totalScore = 0;
-    for (var i = 0; i < values.length; i++) {
-      totalScore += values[i];
-    }
-    
-    // Display the total score to the user.
-    var totalScoreElement = document.getElementById("totalScore");
-    totalScoreElement.innerHTML = totalScore;
-    totalScoreElement.textContent = totalScore;
-  }
+    // Get all radio button elements
+    var radioButtons = document.querySelectorAll('input[type="radio"]');
 
+    // Reset total score to 0 before calculating
+    totalScore = 0;
 
+    // Loop through each radio button
+    radioButtons.forEach(function (radioButton) {
+        // Check if the radio button is checked
+        if (radioButton.checked) {
+            // Add the value to the total score
+            totalScore += parseInt(radioButton.value);
+        }
+    });
+}
 
+function showPopup() {
+    // Display the total score in a popup
+    alert('Form submitted successfully!\nTotal Score: ' + totalScore);
+}
+
+document.getElementById('submitBtn').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+    calculateScore();
+    showPopup();
+});
