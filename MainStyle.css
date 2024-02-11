@@ -37,9 +37,9 @@
     text-decoration: none;
 }
 
-.menu li a{
+.menu li a {
     text-decoration: none;
-    margin:10px;
+    margin: 10px;
     font-size: 19px;
     font-family: 'Noto Sans Thai';
     color: rgb(54, 48, 98);
@@ -63,11 +63,11 @@
     margin: 0px;
 }
 
-.Search:hover input{
+.Search:hover input {
     width: 100px;
 }
 
-.Search input{
+.Search input {
     width: 0;
     outline: none;
     border: none;
@@ -76,28 +76,69 @@
     background: transparent;
 }
 
-.Search a .fas{
+.Search a .fas {
     color: rgb(142, 197, 250);
 }
-.Search:hover{
+
+.Search:hover {
     transition: .3s;
     text-shadow: 0 0 20px rgb(136, 165, 184);
 }
 
-#check{
+#check {
     display: none;
 }
-.checkbtn{
+
+.checkbtn {
     margin: 7px 0px 7px;
     font-size: 3rem;
     font-size: 1.5rem;
     color: rgb(54, 48, 98);
     padding: .5rem 1rem;
-    border-radius: .5rem ;
-    border: .1rem solid rgba(33, 97, 140,.2);
-    cursor: pointer;  
-    display: none;  
+    border-radius: .5rem;
+    border: .1rem solid rgba(33, 97, 140, .2);
+    cursor: pointer;
+    display: none;
 }
+
+.main-body .heading {
+    background-color: rgb(135, 196, 255);
+    margin: 2%;
+    padding: .5rem;
+    width: 200px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: -1px 1px 0 #1B4F72,
+        1px 1px 0 #1B4F72,
+        1px -1px 0 #1B4F72,
+        -1px -1px 0 #1B4F72;
+    border-radius: 20px;
+    box-shadow: 2px 2px grey;
+}
+
+.main-body .allCard{
+    gap: 5%;
+}
+
+.main-body .allCard .card {
+    padding: 2%;
+    width: 40%;
+}
+
+.main-body .allCard .card img{
+    height: 250px ;
+}
+
+.main-body .allCard .card a{
+    font-size: 1.4rem;
+}
+
+
+
+
+
 
 
 
@@ -105,19 +146,19 @@
 
 
 @media (max-width: 900px) {
-    .checkbtn{
+    .checkbtn {
         display: block;
     }
 
-    html{
+    html {
         overflow-x: hidden;
     }
 
-    .menu ul{
+    .menu ul {
         position: absolute;
         width: 200px;
         height: 260px;
-        background:rgb(184, 223, 249);
+        background: rgb(184, 223, 249);
         top: 80px;
         right: .8rem;
         text-align: center;
@@ -127,34 +168,35 @@
         box-shadow: 0px 0px 15px rgb(177, 184, 194);
         transform: translateX(130%);
     }
-    .menu ul a{
+
+    .menu ul a {
         font-size: 18px;
-        margin:.5rem ;
-        padding:.5rem;
+        margin: .5rem;
+        padding: .5rem;
         display: block;
     }
 
-    .menu ul li a:hover{
+    .menu ul li a:hover {
         background: none;
         color: white;
         text-shadow: 0 0 15px rgb(4, 102, 167);
         transition: .3s;
     }
 
-    #check:checked ~ .menu ul {
+    #check:checked~.menu ul {
         transition: .2s;
         transform: translateX(0%);
     }
-} 
+}
 
 @media(max-width: 400px) {
-    .checkbtn{
+    .checkbtn {
         margin: 0px;
-        padding: .5rem ;
+        padding: .5rem;
         font-size: 1rem;
     }
 
-    .menu .main{
+    .menu .main {
         margin-left: 10px;
         font-size: 1.2rem;
     }
@@ -165,8 +207,8 @@
         top: 80px;
     }
 
-    .menu ul li a{
-        margin:.2rem ;
+    .menu ul li a {
+        margin: .2rem;
     }
 
     .menu li a {
@@ -174,16 +216,19 @@
     }
 }
 
-@media (max-width: 300px),(max-height: 400px){
-    .checkbtn{
-        padding: .3rem ;
+@media (max-width: 300px),
+(max-height: 400px) {
+    .checkbtn {
+        padding: .3rem;
         font-size: .8rem;
     }
+
     .menu {
         box-shadow: 0px 0px 15px rgb(198, 205, 214);
         height: 1.2rem;
     }
-    .menu .main{
+
+    .menu .main {
         font-size: 1rem;
     }
 
@@ -193,9 +238,9 @@
         top: 60px;
     }
 
-    .menu ul li a{
-        margin:0 ;
-        padding:.3rem;
+    .menu ul li a {
+        margin: 0;
+        padding: .3rem;
         display: block;
     }
 
@@ -203,14 +248,12 @@
         font-size: .7rem;
     }
 
-    .Search:hover input{
+    .Search:hover input {
         width: 40px;
     }
-    
-    .Search input{
+
+    .Search input {
         font-size: 10px;
         font-weight: 300;
     }
 }
-
-
