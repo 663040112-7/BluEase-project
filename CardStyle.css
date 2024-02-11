@@ -3,7 +3,8 @@
     flex-wrap: wrap;
     margin: 40px;
 }
-.allCard .card {
+
+.card {
     border-style: groove;
     border-width:2px;
     border-color: rgb(174, 214, 241);
@@ -18,7 +19,7 @@
     margin: 20px;
 }
 
-.allCard .card img{
+.card img{
     border-style:groove;
     border-color:  rgb(184, 202, 229);
     align-self: center;
@@ -26,7 +27,7 @@
     height: 150px;
 }
 
-.allCard .card a{
+.card a{
     text-align: center;
     padding: 20px;
     font-size: 1rem;
