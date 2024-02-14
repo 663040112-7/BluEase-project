@@ -125,8 +125,8 @@
 
 .first-content .content a {
     width: 50%;
-    position: relative;
     text-align: center;
+    position: relative;
 }
 
 .first-content .content img{
@@ -156,17 +156,10 @@
         1px -1px 0 #1B4F72,
         -1px -1px 0 #1B4F72;
     border-radius: 15px;
-}
-
-.form div{
     color: white;
     background-color: rgba(156, 205, 255, 0.9);
 }
 
-.hospt div{
-    color: white;
-    background-color: rgba(156, 205, 255, 0.9);
-}
 
 
 
@@ -189,6 +182,7 @@
     }
 
     .menu ul {
+        z-index: 1;
         position: absolute;
         width: 200px;
         height: 260px;
