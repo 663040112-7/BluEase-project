@@ -44,3 +44,21 @@
         text-shadow: 0 0 15px rgb(15, 77, 117);
     }
 } 
+
+
+.buttonPart {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    justify-content: center; 
+}
+
+.buttonPart .button { 
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-inline: 7px;
+    background-color: rgb(58, 93, 127); 
+    color: white; 
+}
