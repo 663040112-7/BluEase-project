@@ -26,7 +26,7 @@ function interpretScore(score) {
   } else if (score >= 15 && score <= 19) {
     alert("Your score indicates significant depressive symptoms. It's crucial to seek professional help as soon as possible.");
   } else if (score >= 20) {
-    alert("Your score suggests very serious depression. Please reach out for emergency help immediately. Here are some resources: (list resources here)");
+    alert("Your score suggests very serious depression. Please reach out for emergency help immediately.");
   } else {
     alert("An unexpected score was calculated. Please refresh the page and try again.");
   }
