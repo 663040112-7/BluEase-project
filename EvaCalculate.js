@@ -1,24 +1,21 @@
-
-var totalScore = 0;
-
-function calculateScore() {
+function calculateAndShowScore() {
+    // Calculate the score as before
+    var totalScore = 0;
     var radioButtons = document.querySelectorAll('input[type="radio"]');
-
-    totalScore = 0;
-
+  
     radioButtons.forEach(function (radioButton) {
-        if (radioButton.checked) {
-            totalScore += parseInt(radioButton.value);
-        }
+      if (radioButton.checked) {
+        totalScore += parseInt(radioButton.value);
+      }
     });
-}
-
-function showPopup() {
+  
+    // Display the score in a single popup
     alert('Form submitted successfully!\nTotal Score: ' + totalScore);
-}
-
-document.getElementById('submitBtn').addEventListener('click', function (event) {
-    event.preventDefault(); 
-    calculateScore();
-    showPopup();
-});
+  }
+  
+  document.getElementById('submitBtn').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default form submission
+  
+    calculateAndShowScore(); // Call the combined function
+  });
+  
