@@ -20,6 +20,7 @@
 
 .col-md-9 h3 {
     margin: 20px;
+    margin-left: 4%;
 }
 
 table {
@@ -46,9 +47,13 @@ table tr {
     display: flex;
 }
 
-.standard {
+.standardmax {
     font-size: 1.4rem;
     font-weight: bold;
+}
+
+.standardmin {
+    display: none;
 }
 
 .value-box .value .num-of-value {
@@ -56,7 +61,7 @@ table tr {
     font-weight: bold;
     padding: 2px 10px;
     margin: 2px;
-    border-radius: 20px;
+    border-radius: 50%;
     border-style: groove;
 }
 
@@ -94,8 +99,6 @@ table td .radio-button input{
     height: 40px;
 }
 
-
-
 #submitBtn {
     font-size: 1.5rem;
     font-weight: bold;
@@ -118,14 +121,111 @@ table td .radio-button input{
 
 
 
+@media (max-width: 1150px) {
+    .standardmax {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
 
 
-
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .menu .choice1 {
         background: none;
         text-shadow: 0 0 15px rgb(15, 77, 117);
+    } 
+    .col-md-9 h1 {
+        width: 50%;
+        font-size: 1.3rem ;
     }
+    .col-md-9 h3 {
+        font-size: 1.1rem;
+    }
+    .standardmax {
+        margin-right: 10px;
+    }
+    
+    tr {
+        font-size: 1.1rem;
+    }
+    #submitBtn {
+        font-size: 1rem;
+    }
+    
+    .value-box .value .num-of-value {
+        font-size: 1rem;
+        margin: 1px;
+        padding: 1px 8px;
+    }
+    table td .radio-button input{
+        margin: 8px;
+        width: 16px;
+    }
+
+
 } 
 
+@media (max-width: 650px) {
+    .col-md-9 h1 {
+        font-size: 1rem ;
+    }
+    .col-md-9 h3 {
+        font-size: .9rem;
+    }
+    table td{
+        margin: 0;
+    }
+    .standardmax {
+        display: none;
+    }
+    .standardmin {
+        display: block;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    tr {
+        font-size: 1rem;
+    }
 
+}
+
+@media (max-width: 400px) {
+    .col-md-9 h3 {
+        font-size: .9rem;
+    }
+    .standardmin {
+        font-size: .9rem;
+    }
+    tr {
+        font-size: .8rem;
+    }
+    .value-box .value .num-of-value {
+        font-size: .8rem;
+        padding: 1px 6.5px;
+    }
+    table td .radio-button input{
+        margin: 5px;
+    }
+}
+
+@media (max-width: 300px) {
+    .col-md-9 h1 {
+        font-size: .8rem;
+    }
+    .col-md-9 h3 {
+        font-size: .8rem;
+    }
+    .standardmin {
+        font-size: .7rem;
+    }
+    tr {
+        font-size: .8rem;
+    }
+    .value-box .value .num-of-value {
+        font-size: .6rem;
+        padding: .8px 5px;
+    }
+    table td .radio-button input{
+        margin: 3px;
+    }
+}

@@ -39,7 +39,6 @@
 
 .container .address .SearchAddress .fa-magnifying-glass{
     font-size: 20px;
-
 }
 
 .container .map {
@@ -99,9 +98,37 @@
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .menu .choice3 {
         background: none;
         text-shadow: 0 0 15px rgb(15, 77, 117);
     }
 } 
+
+@media (max-width: 700px) {
+    
+    .container .map .mappic img {
+        width: 420px;
+        height: 250px;
+    }
+    
+.container .address .SearchAddress input {
+    padding: 7px;
+    width: 150px;
+    margin-right: 20px;
+}
+}
+
+@media (max-width: 500px) {
+    .container .map .mappic img {
+        width: 320px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container .map .mappic img {
+        width: 220px;
+        height: 150px;
+    }
+}
