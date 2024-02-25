@@ -3,25 +3,48 @@
     background-color: rgb(58, 93, 127);
 }
 
-.allCard .card {
-    margin: 30px 40px !important;
-    padding : 30px 80px !important;
-}
-
-.allCard .card img{
+.allCard .card img {
     height: 200px !important;
 }
 
-.allCard .card a{
-    font-size: 17px !important;
+.allCard .card a {
+    font-size: 1.1rem !important;
     margin: 10px;
     position: relative;
     display: block;
     align-self: center;
-    width: 120%;
-
+    width: 105%;
 }
 
-.allCard .card p{
-    font-size: 14px;
+.allCard .card p {
+    font-size: .9rem;
+}
+
+
+@media (max-width: 500px) {
+    .allCard .card img {
+        height: 170px !important;
+    }
+
+    .allCard .card a {
+        font-size: .9rem !important;
+    }
+
+    .allCard .card p {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .allCard .card img {
+        height: 140px !important;
+    }
+
+    .allCard .card a {
+        font-size: .8rem !important;
+    }
+
+    .allCard .card p {
+        font-size: .7rem;
+    }
 }

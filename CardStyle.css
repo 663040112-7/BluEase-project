@@ -1,36 +1,110 @@
-.allCard{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 40px;
+.allCard {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 3%;
+    grid-gap: 20px;
 }
 
 .card {
     border-style: groove;
-    border-width:2px;
+    border-width: 2px;
     border-color: rgb(174, 214, 241);
     background-color: rgb(232, 246, 255);
     display: flex;
     flex-direction: column;
-    flex: 1;
-    padding: 30px; 
+    padding: 30px;
     box-shadow: 0 0 15px rgb(184, 220, 244);
     border-radius: 15px;
     text-align: right;
-    margin: 20px;
 }
 
-.card img{
-    border-style:groove;
-    border-color:  rgb(184, 202, 229);
+.card img {
+    border-style: groove;
+    border-color: rgb(184, 202, 229);
     align-self: center;
     width: auto;
     height: 150px;
 }
 
-.card a{
+.card a {
     text-align: center;
     padding: 20px;
     font-size: 1rem;
     font-weight: bold;
     color: black;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1600px) {
+    .allCard {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media (max-width: 1250px) {
+    .card img {
+        height: 100px;
+    }
+}
+
+@media (max-width: 950px) {
+    .allCard {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .allCard {
+        margin: 10px;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .allCard {
+        grid-template-columns: auto;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        font-size: .8rem;
+    }
+
+    .card img {
+        height: 100px;
+    }
+
+    .card a {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .card {
+        font-size: .7rem;
+        padding: 20px;
+    }
+
+    .card img {
+        height: 90px;
+    }
+
+    .card a {
+        font-size: .8rem;
+    }
 }

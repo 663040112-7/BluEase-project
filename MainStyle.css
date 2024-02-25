@@ -160,6 +160,10 @@
     background-color: rgba(156, 205, 255, 0.9);
 }
 
+.Kn-content .allCard {
+    margin-top: 65px;
+}
+
 .swiper {
     margin-top: -40px;
 }
@@ -175,7 +179,6 @@
     font-weight: bold;
     margin-inline: -10px;
 }
-
 
 
 
@@ -282,7 +285,7 @@
         font-size: 1rem;
     }
 
-    
+
     .main-body .heading {
         padding: 8px;
         width: 180px;
