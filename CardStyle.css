@@ -57,7 +57,7 @@
 
 @media (max-width: 950px) {
     .allCard {
-        grid-template-columns: auto auto;
+        grid-template-columns: 49% 49%;
     }
 }
 
