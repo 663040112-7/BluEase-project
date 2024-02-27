@@ -1,5 +1,4 @@
 .allCard {
-    background-color: pink;
     display: grid;
     grid-template-columns: 32% 32% 32%;
     margin: 0 3.5%;
