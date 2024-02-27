@@ -73,7 +73,8 @@
 
 @media (max-width: 600px) {
     .allCard {
-        grid-template-columns: auto;
+        grid-template-columns: 100%;
+        grid-gap: 0px;
     }
 
     .card img {
