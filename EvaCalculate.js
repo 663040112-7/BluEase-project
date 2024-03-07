@@ -1,39 +1,52 @@
 function calculateAndShowScore() {
   // Calculate the score as before
   let totalScore = 0;
-  const radioButtons = document.querySelectorAll('input[type="radio"]');
+  const radioButtons = document.querySelectorAll('input[type="radio"]:checked');
+
+  if (radioButtons.length === 0) {
+    alert('กรุณาเลือกคะแนนทุกข้อ');
+    return;
+  }
 
   radioButtons.forEach(radioButton => {
-    if (radioButton.checked) {
-      totalScore += parseInt(radioButton.value);
-    }
+    totalScore += parseInt(radioButton.value);
   });
 
-  // Display the score in a single popup
-  alert(`Form submitted successfully!\nTotal Score: ${totalScore}`);
+  // Create the popup content
+  let popupContent = `<h2>ผลการประเมิน</h2>`;
+  popupContent += `<p>คะแนนรวม: ${totalScore}</p>`;
 
-  // Separate score interpretation (assuming this is what you intend)
-  interpretScore(totalScore);
-}
-
-function interpretScore(score) {
-  if (score >= 0 && score <= 4) {
-    alert("You appear to be doing well. Keep it up!");
-  } else if (score >= 5 && score <= 8) {
-    alert("It seems you might be experiencing some low moods. Consider seeking support or talking to someone you trust.");
-  } else if (score >= 9 && score <= 14) {
-    alert("Your score suggests you might be struggling with depression. Please consider seeking professional help.");
-  } else if (score >= 15 && score <= 19) {
-    alert("Your score indicates significant depressive symptoms. It's crucial to seek professional help as soon as possible.");
-  } else if (score >= 20) {
-    alert("Your score suggests very serious depression. Please reach out for emergency help immediately.");
+  // Add interpretation based on score
+  if (totalScore >= 0 && totalScore <= 4) {
+    popupContent += `<p>ท่านไม่มีอาการซึมเศร้าหรือมีก็เพียงเล็กน้อย</p>`;
+  } else if (totalScore >= 5 && totalScore <= 8) {
+    popupContent += `<p>ท่านอาจกำลังประสบกับภาวะอารมณ์เศร้า ควรหาคนพูดคุยหรือปรึกษานักจิตวิทยา</p>`;
+  } else if (totalScore >= 9 && totalScore <= 14) {
+    popupContent += `<p>ท่านอาจกำลังเผชิญกับภาวะซึมเศร้า ควรปรึกษานักจิตวิทยาหรือแพทย์ผู้เชี่ยวชาญ</p>`;
+  } else if (totalScore >= 15 && totalScore <= 19) {
+    popupContent += `<p>ท่านมีอาการซึมเศร้าปานกลาง ควรรีบปรึกษานักจิตวิทยาหรือแพทย์ผู้เชี่ยวชาญ</p>`;
+  } else if (totalScore >= 20) {
+    popupContent += `<p>ท่านมีอาการซึมเศร้ารุนแรง ควรไปพบแพทย์ผู้เชี่ยวชาญโดยเร็วที่สุด</p>`;
   } else {
-    alert("An unexpected score was calculated. Please refresh the page and try again.");
+    popupContent += `<p>คำนวณคะแนนผิดพลาด กรุณาลองใหม่อีกครั้ง</p>`;
   }
+
+  // Display the popup using a more modern approach (e.g., DOM manipulation)
+  const popup = document.createElement('div');
+  popup.classList.add('popup');
+  popup.innerHTML = popupContent;
+  document.body.appendChild(popup);
+
+  // Add a close button to the popup
+  const closeButton = document.createElement('button');
+  closeButton.textContent = 'ปิด';
+  closeButton.classList.add('close-btn');
+  popup.appendChild(closeButton);
+
+  // Close the popup when the close button is clicked
+  closeButton.addEventListener('click', () => {
+    popup.remove();
+  });
 }
 
-document.getElementById('submitBtn').addEventListener('click', function (event) {
-  event.preventDefault(); // Prevent default form submission
-
-  calculateAndShowScore();
-});
+document.getElementById('submitBtn').addEventListener('click', calculateAndShowScore);
