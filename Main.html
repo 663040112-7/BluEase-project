@@ -24,10 +24,12 @@
             </ul>
             <li>
                 <div class="Search">
-                    <input type="text" placeholder="Search...">
-                    <a href="">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
+                    <form id="searchForm" name="search" method="get" action="searchYoutube.php">
+                        <input type="text" placeholder="Search..." name="search" required>
+                        <a href="javascript:void(0);" onclick="document.getElementById('searchForm').submit();">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a> 
+                    </form>
                 </div>
             <li>
                 <label for="check" class="checkbtn">
