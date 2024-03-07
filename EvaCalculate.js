@@ -43,10 +43,23 @@ function calculateAndShowScore() {
   closeButton.classList.add('close-btn');
   popup.appendChild(closeButton);
 
-  // Close the popup when the close button is clicked
-  closeButton.addEventListener('click', () => {
+  // Add the event listener to the close button
+  closeButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Remove the popup from the DOM
     popup.remove();
   });
 }
 
+// Add the event listener to the submit button
 document.getElementById('submitBtn').addEventListener('click', calculateAndShowScore);
+
+// Add the event listener to the close button outside of the calculateAndShowScore() function
+const closeButton = document.querySelector('.close-btn');
+closeButton.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  // Remove the popup from the DOM
+  popup.remove();
+});
