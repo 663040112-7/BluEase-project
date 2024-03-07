@@ -246,6 +246,8 @@ table td .radio-button input {
         margin: 3px;
     }
 }
+
+
 .popup {
   position: fixed;
   top: 50%;
@@ -263,3 +265,5 @@ table td .radio-button input {
   right: 10px;
   cursor: pointer;
 }
+
+
