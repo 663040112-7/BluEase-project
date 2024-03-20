@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.choice2 {
+    background-color: rgb(142, 197, 250);
+}
+
+.Knowledge-choice {
+    margin: 20px 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Knowledge-choice a {
+    text-decoration: none;
+    color: rgb(54, 48, 98);
+    padding: 8px;
+    background-color: rgb(146, 199, 253);
+    width: 25%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgb(187, 194, 203);
+    font-family: "kanit";
+    font-size: 1.2rem;
+    border-style: groove;
+    border-width: 2px;
+    align-self: center;
+    text-align: center;
+}
+
+#youtube2 {
+    display: none;
+}
+
+.Knowledge-choice a:hover {
+    cursor: pointer;
+    transition: .2s;
+    color: rgb(235, 245, 251);
+    background-color: rgb(58, 93, 127);
+}
+
+.buttonPart {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    justify-content: center;
+}
+
+.buttonPart .button {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-inline: 7px;
+    background-color: rgb(58, 93, 127);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 950px) {
+    .menu .choice2 {
+        background: none;
+        text-shadow: 0 0 15px rgb(15, 77, 117);
+    }
+}
+
+@media (max-width: 750px) {
+    .Knowledge-choice a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .Knowledge-choice a {
+        font-size: .8rem;
+    }
+
+    #youtube1 {
+        display: none;
+    }
+
+    #youtube2 {
+        display: block;
+    }
+}
+
+@media (max-width: 350px) {
+    .Knowledge-choice a {
+        font-size: .7rem;
+    }
+}

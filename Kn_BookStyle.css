@@ -1,0 +1,50 @@
+#books {
+    color: white;
+    background-color: rgb(58, 93, 127);
+}
+
+.allCard .card img {
+    height: 200px !important;
+}
+
+.allCard .card a {
+    font-size: 1.1rem !important;
+    margin: 10px;
+    position: relative;
+    display: block;
+    align-self: center;
+    width: 105%;
+}
+
+.allCard .card p {
+    font-size: .9rem;
+}
+
+
+@media (max-width: 500px) {
+    .allCard .card img {
+        height: 170px !important;
+    }
+
+    .allCard .card a {
+        font-size: .9rem !important;
+    }
+
+    .allCard .card p {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .allCard .card img {
+        height: 140px !important;
+    }
+
+    .allCard .card a {
+        font-size: .8rem !important;
+    }
+
+    .allCard .card p {
+        font-size: .7rem;
+    }
+}

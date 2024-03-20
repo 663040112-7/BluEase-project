@@ -1,0 +1,269 @@
+.choice1 {
+    background-color: rgb(142, 197, 250);
+}
+
+
+.col-md-9 h1 {
+    background-color: rgb(194, 225, 255);
+    font-size: 1.5rem;
+    width: 350px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(184, 220, 244);
+    margin: auto;
+    border-style: groove;
+    border-width: 2px;
+    border-color: rgb(25, 124, 190);
+}
+
+.col-md-9 h3 {
+    margin: 20px;
+    margin-left: 4%;
+}
+
+table {
+    font-size: 1.3rem;
+    margin: auto;
+    width: 95%;
+}
+
+.form:nth-child(odd) {
+    background-color: rgb(236, 246, 255);
+}
+
+.form:nth-child(even) {
+    background-color: rgb(187, 221, 255);
+}
+
+table tr {
+    display: block;
+    border-radius: 15px;
+    margin: 0 3px;
+    box-shadow: 0 0 15px rgb(155, 201, 232);
+}
+
+.value-box .value {
+    display: flex;
+}
+
+.standardmax {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.standardmin {
+    display: none;
+}
+
+.value-box .value .num-of-value {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px 10px;
+    margin: 2px;
+    border-radius: 50%;
+    border-style: groove;
+}
+
+.value-box .value .value0 {
+    background-color: rgb(169, 223, 191);
+}
+
+.value-box .value .value1 {
+    background-color: rgb(249, 231, 159);
+}
+
+.value-box .value .value2 {
+    background-color: rgb(250, 215, 160);
+}
+
+.value-box .value .value3 {
+    background-color: rgb(245, 183, 177);
+}
+
+table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: auto 20px;
+    align-items: center;
+}
+
+table td .radio-button {
+    display: flex;
+}
+
+table td .radio-button input {
+    margin: 10px;
+    width: 20px;
+    height: 40px;
+}
+
+#submitBtn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 50px;
+    border-radius: 15px;
+    background-color: rgb(124, 190, 252);
+    box-shadow: 0 0 15px rgb(74, 156, 210);
+    border: none;
+    display: block;
+    margin: 30px auto;
+}
+
+#submitBtn:hover {
+    color: white;
+    background-color: rgb(60, 124, 184);
+}
+
+
+
+
+
+
+@media (max-width: 1150px) {
+    .standardmax {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+
+
+@media (max-width: 950px) {
+    .menu .choice1 {
+        background: none;
+        text-shadow: 0 0 15px rgb(15, 77, 117);
+    }
+
+    .col-md-9 h1 {
+        width: 50%;
+        font-size: 1.4rem;
+    }
+
+    .col-md-9 h3 {
+        font-size: 1.1rem;
+    }
+
+    .standardmax {
+        display: none;
+    }
+
+    .standardmin {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    tr {
+        font-size: 1.1rem;
+    }
+
+    #submitBtn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .col-md-9 h1 {
+        font-size: 1rem;
+    }
+
+    .col-md-9 h3 {
+        font-size: .9rem;
+    }
+
+    table td {
+        margin: 0;
+    }
+
+    .standardmin {
+        font-size: 1rem;
+    }
+
+    tr {
+        font-size: 1rem;
+    }
+
+    .value-box .value .num-of-value {
+        font-size: 1rem;
+        margin: 1px;
+        padding: 1px 8px;
+    }
+
+    table td .radio-button input {
+        margin: 8px;
+        width: 16px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .col-md-9 h3 {
+        font-size: .9rem;
+    }
+
+    .standardmin {
+        font-size: .9rem;
+    }
+
+    tr {
+        font-size: .8rem;
+    }
+
+    .value-box .value .num-of-value {
+        font-size: .8rem;
+        padding: 1px 6.5px;
+    }
+
+    table td .radio-button input {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 300px) {
+    .col-md-9 h1 {
+        font-size: .8rem;
+    }
+
+    .col-md-9 h3 {
+        font-size: .8rem;
+    }
+
+    .standardmin {
+        font-size: .7rem;
+    }
+
+    tr {
+        font-size: .8rem;
+    }
+
+    .value-box .value .num-of-value {
+        font-size: .6rem;
+        padding: .8px 5px;
+    }
+
+    table td .radio-button input {
+        margin: 3px;
+    }
+}
+
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 100;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+

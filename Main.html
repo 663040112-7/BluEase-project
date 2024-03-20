@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="C:\Users\User\OneDrive\Desktop\BluEase-project\picture\blueaseIcon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BluEase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="MainStyle.css">
+    <link rel="stylesheet" href="CardStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" name="" id="check">
+        <nav class="menu">
+            <a class="main" href="Main.html">BluEase</a>
+            <ul>
+                <li><a class="choice choice1" href="Evaluation.html">แบบประเมิน</a></li>
+                <li><a class="choice choice2" href="Kn_Youtube.html">คลังความรู้</a></li>
+                <li><a class="choice choice3" href="Hospital.html">สถานที่รักษา</a></li>
+                <li><a class="choice choice4" href="Ot.disease.html">โรคที่เกี่ยวข้อง</a></li>
+            </ul>
+            <li>
+                <div class="Search">
+                    <form id="searchForm" name="search" method="get" action="searchYoutube.php">
+                        <input type="text" placeholder="Search..." name="search" required>
+                        <a href="javascript:void(0);" onclick="document.getElementById('searchForm').submit();">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a> 
+                    </form>
+                </div>
+            <li>
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+        </nav>
+
+        <div class="main-body">
+            <div class="first-content">
+                <div class="heading">รายการแนะนำ</div>
+                <div class="content">
+                    <a class="form" href="Evaluation.html">
+                        <img src="picture/evaluation.jpg">
+                        <div>แบบประเมินโรคซึมเศร้า</div>
+                    </a>
+                    <a class="hospt" href="Hospital.html">
+                        <img src="picture/hospital.jpg">
+                        <div>สถานที่รักษา</div>
+                    </a>
+                </div>
+            </div>
+            <div class="Kn-content">
+                <div class="heading">คลังความรู้</div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="allCard">
+                                <div class="card">
+                                    <img src="YTpic/Dead_Inside.jpg" alt="">
+                                    <a href="https://youtu.be/3YJoAMNnd40?si=QfHU80rre0UHWd5t">ภาวะ Dead Inside
+                                        ใจพังแต่ยังต้องเดินต่อไป</a>
+                                    <p>Alljit</p>
+                                </div>
+                                <div class="card">
+                                    <img src="YTpic/รับมือกับความผิดหวัง.jpg" alt="">
+                                    <a href="https://youtu.be/ZTdCGpA7_IU?si=-93tx9BULqVgNpI_">ความผิดหวังเป็นเรื่องธรรมดาของชีวิต
+                                        แต่ควรเปลี่ยนวิธีคิดก่อนจะกลายเป็นกับดัก </a>
+                                    <p>The Standard Podcast</p>
+                                </div>
+                                <div class="card">
+                                    <img src="YTpic/Dead_Inside.jpg" alt="">
+                                    <a href="https://youtu.be/3YJoAMNnd40?si=QfHU80rre0UHWd5t">ภาวะ Dead Inside
+                                        ใจพังแต่ยังต้องเดินต่อไป</a>
+                                    <p>Alljit</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="allCard">
+                                <div class="card">
+                                    <img src="YTpic/มโนหรือซึมเศร้า.jpg" alt="">
+                                    <a href="https://youtu.be/lZ9x5XvcUCU?si=HuaInGJk6xjWQl5t">โรงพยาบาลธนบุรี :
+                                        โรคซึมเศร้าเป็นอย่างไร ?</a>
+                                    <p>Thonburi Hospital channel</p>
+                                </div>
+                                <div class="card">
+                                    <img src="YTpic/Dead_Inside.jpg" alt="">
+                                    <a href="https://youtu.be/3YJoAMNnd40?si=QfHU80rre0UHWd5t">ภาวะ Dead Inside
+                                        ใจพังแต่ยังต้องเดินต่อไป</a>
+                                    <p>Alljit</p>
+                                </div>
+                                <div class="card">
+                                    <img src="YTpic/มโนหรือซึมเศร้า.jpg" alt="">
+                                    <a href="https://youtu.be/lZ9x5XvcUCU?si=HuaInGJk6xjWQl5t">โรงพยาบาลธนบุรี :
+                                        โรคซึมเศร้าเป็นอย่างไร ?</a>
+                                    <p>Thonburi Hospital channel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="allCard">
+                                <div class="card">
+                                    <img src="YTpic/เรียนรู้และเข้าใจโรคซึมเศร้า.jpg" alt="">
+                                    <a
+                                        href="https://youtu.be/g-AuxSvRJ2E?si=OoKdp3B3r-jR6CHS">เรียนรู้และเข้าใจโรคซึมเศร้า</a>
+                                    <p>Mahidol Channel</p>
+                                </div>
+                                <div class="card">
+                                    <img src="YTpic/รับมือกับความผิดหวัง.jpg" alt="">
+                                    <a href="https://youtu.be/ZTdCGpA7_IU?si=-93tx9BULqVgNpI_">ความผิดหวังเป็นเรื่องธรรมดาของชีวิต
+                                        แต่ควรเปลี่ยนวิธีคิดก่อนจะกลายเป็นกับดัก </a>
+                                    <p>The Standard Podcast</p>
+                                </div>
+                                <div class="card">
+                                    <a href="Kn_Youtube.html">ดูทั้งหมด
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="C:\Users\User\OneDrive\Desktop\BluEase-project\picture\blueaseIcon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถานที่รักษา</title>
+    <script src="https://kit.fontawesome.com/274a0dc0b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="HosStyle.css">
+    <link rel="stylesheet" href="MainStyle.css">
+    <script src="https://developer.nostramap.com/developer/V2/js/jquery/jquery-1.11.3.min.js"></script>
+    <script src="https://developer.nostramap.com/developer/V2/js/jquery/jquery-ui-1.11.2.js"></script>
+    <script type="text/javascript"
+        src="//api.nostramap.com/nostraapi/v2.0?key=G(WyDFzlJ7fJGSJrCocLN184v4yHbv5pBSbXzJyEg8vlves63jVG1PVyMwjVQoiPzJPHufV1M3Rdb3rW4Fzz8jG=====2"></script>
+</head>
+
+
+<script>
+    function Search() {
+        var query = new nostra.services.Search.LocationSearch({
+            keyword: "โรงพยาบาลจิตเวช" || "จิตเวช" ||  "สุขภาพจิต" || "คลินิกจิตเวช" ,
+            catCode: "hospital",
+            adminLevel1: (document.getElementById("txtAdmin1").value.trim() == null || document.getElementById("txtAdmin1").value.trim() == "null") ? "" : document.getElementById("txtAdmin1").value.trim(),
+            adminLevel2: (document.getElementById("txtAdmin2").value.trim() == null || document.getElementById("txtAdmin2").value.trim() == "null") ? "" : document.getElementById("txtAdmin2").value.trim(),
+        });
+
+        query.execute(function (results) {
+            var divResult = document.getElementById('result');
+            divResult.innerHTML = "";
+            if (results.results == null) {
+                divResult.innerHTML = results.errorMessage;
+            } else if (results.results.length < 1) {
+                divResult.innerHTML = results.errorMessage;
+            } else {
+                for (var i = 0; i < results.results.length; i++) {
+                    var result = results.results[i];
+                    var strAdminCode1 = " - ";
+                    var strAdminCode2 = " - ";
+                    var strAdminCode3 = " - ";
+                    if (result["AdminLevel1Code"] != null) {
+                        strAdminCode1 = result["AdminLevel1Code"];
+                    }
+                    if (result["AdminLevel2Code"] != null) {
+                        strAdminCode2 = result["AdminLevel2Code"];
+                    }
+                    if (result["AdminLevel3Code"] != null) {
+                        strAdminCode3 = result["AdminLevel3Code"];
+                    }
+
+                    var divResults =
+                        "<div class='map'>" +
+                            "<div class='mappic'>" +
+                                "<div id='mappic'>" + "</div>" +
+                                "<a id='link' href=''><i class='fa-solid fa-globe'></i>ดูเส้นทาง</a>" +
+                            "</div>" +
+                            "<div class='map-info'>" +
+                                "<h2>" + ((result["Name_L"]) ? result["Name_L"] : "") + "</h2>" +
+                                "<p><i class='fa-solid fa-location-dot'></i> ที่อยู่: " + ((result["AdminLevel4_L"]) ? result["AdminLevel4_L"] : "") +
+                                    " ตำบล " + ((result["AdminLevel3_L"]) ? result["AdminLevel3_L"] : "") +
+                                    " อำเภอ " + ((result["AdminLevel2_L"]) ? result["AdminLevel2_L"] : "") +
+                                    " จังหวัด " + ((result["AdminLevel1_L"]) ? result["AdminLevel1_L"] : "") +
+                                    " " + ((result["PostCode"]) ? result["PostCode"] : "") + "</p>" +
+                                "<p><i class='fa-solid fa-phone'></i> เบอร์โทรศัพท์: " + ((result["Telephone"]) ? result["Telephone"] : "") + "</p>" +
+                            "</div>"
+                        "</div>";
+
+                    var div = document.createElement("div");
+                    div.innerHTML = divResults;
+                    divResult.appendChild(div);
+                    divResult.appendChild(document.createElement("hr"));
+                }
+            }
+        });
+    }
+</script>
+
+<body>
+    <div class="container">
+        <input type="checkbox" name="" id="check">
+        <nav class="menu">
+            <a class="main" href="Main.html">BluEase</a>
+            <ul>
+                <li><a class="choice choice1" href="Evaluation.html">แบบประเมิน</a></li>
+                <li><a class="choice choice2" href="Kn_Youtube.html">คลังความรู้</a></li>
+                <li><a class="choice choice3" href="Hospital.html">สถานที่รักษา</a></li>
+                <li><a class="choice choice4" href="Ot.disease.html">โรคที่เกี่ยวข้อง</a></li>
+            </ul>
+            <li>
+                <div class="Search">
+                    <input type="text" placeholder="Search...">
+                    <a href="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            <li>
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+        </nav>
+        <h1>กรอกที่อยู่ที่ใกล้เคียง
+            <i class="fas fa-home"></i>
+        </h1>
+        <div class="address">
+            <div>
+                <div class="SearchAddress">
+                    <input type="text" placeholder="จังหวัด" id="txtAdmin1" />
+                </div>
+            </div>
+            <div>
+                <div class="SearchAddress">
+                    <input type="text" placeholder="อำเภอ" id="txtAdmin2" />
+                </div>
+            </div>
+            <button onclick="Search()">Search</button>
+        </div>
+        <div id="result"></div>
+</body>
+
+</html>
