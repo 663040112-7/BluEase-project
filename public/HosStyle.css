@@ -1,0 +1,185 @@
+.choice3 {
+    background-color: rgb(142, 197, 250);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(54, 48, 98);
+    font-size: 1.7rem;
+}
+
+.address {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.address div {
+    justify-content: center;
+    align-items: center;
+}
+
+.address .SearchAddress {
+    display: flex;
+    margin: 10px;
+}
+
+.address .SearchAddress input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 20px;
+    background-color: rgb(205, 230, 255);
+    border: 1px solid rgb(127, 161, 196);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(184, 220, 244);
+    font-size: 1rem;
+}
+
+.address .SearchAddress input:focus {
+    border: 1px solid rgb(153, 183, 212);
+}
+
+.address button {
+    margin: 10px;
+    width: 120px;
+    height: 45px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgb(94, 144, 192);
+    color: white;
+    border-radius: 15px;
+    border-color: rgb(54, 112, 166);
+    box-shadow: 0 0 15px rgb(184, 220, 244);
+
+}
+
+
+.address button:hover {
+    transition: .5s;
+    background-color: rgb(13, 65, 114);
+    border-color: rgb(203, 222, 250);
+}
+
+.map {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.map .map-info {
+    border-radius: 10px;
+    margin: 2%;
+}
+
+.map .map-info h2 {
+    align-content: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.map .map-info p {
+    margin: 10px;
+    margin-left: 0;
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 950px) {
+    .menu .choice3 {
+        background: none;
+        text-shadow: 0 0 15px rgb(15, 77, 117);
+    }
+
+}
+
+@media (max-width: 800px) {
+    .address {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .address {
+        flex-direction: column;
+    }
+
+    .address .SearchAddress input {
+        padding: 7px;
+        width: 250px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .address .SearchAddress input {
+        width: 200px;
+        font-size: .8rem;
+    }
+
+
+    .address button {
+        margin: 10px;
+        width: 80px;
+        height: 35px;
+        font-size: .8rem;
+        border-radius: 12px;
+    }
+
+    h1 {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+
+    .map .map-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .map .map-info p {
+        font-size: 1.1rem;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+    .address .SearchAddress input {
+        width: 170px;
+        font-size: .7rem;
+    }
+
+    h1 {
+        margin: 20px;
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+
+    .map .map-info h2 {
+        font-size: 1.1rem;
+    }
+
+    .map .map-info p {
+        font-size: .9rem;
+    }
+
+
+}
+
+@media (max-width: 300px) {
+    .address .SearchAddress input {
+        width: 140px;
+    }
+}
