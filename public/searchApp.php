@@ -22,7 +22,7 @@ $result = mysqli_query($connect, $sql);
     <div class="container">
         <input type="checkbox" name="" id="check">
         <nav class="menu">
-            <a class="main" href="Main.html">BluEase</a>
+            <a class="main" href="index.html">BluEase</a>
             <ul>
                 <li><a class="choice choice1" href="Evaluation.html">แบบประเมิน</a></li>
                 <li><a class="choice choice2" href="Kn_Youtube.html">คลังความรู้</a></li>
@@ -31,10 +31,12 @@ $result = mysqli_query($connect, $sql);
             </ul>
             <li>
                 <div class="Search">
-                    <input type="text" placeholder="Search...">
-                    <a href="">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
+                    <form id="searchForm" name="search" method="get" action="searchYoutube.php">
+                        <input type="text" placeholder="Search..." name="search" required>
+                        <a href="javascript:void(0);" onclick="document.getElementById('searchForm').submit();">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </form>
                 </div>
             <li>
                 <label for="check" class="checkbtn">
