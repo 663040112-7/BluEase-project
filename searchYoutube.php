@@ -46,6 +46,7 @@ $result = mysqli_query($connect, $sql);
         </nav>
         <div class="Knowledge-choice">
             <a id="youtube1">Youtube & Podcast</a>
+            <a id="youtube2">Youtube <br> & <br> Podcast</a>
             <a id="app" href="searchApp.php?search=<?php echo urlencode($search); ?>">Application</a>
             <a id="books" href="searchBook.php?search=<?php echo urlencode($search); ?>">Books</a>
         </div>

@@ -214,9 +214,8 @@
         border-top-right-radius: 25px;
         border-bottom-left-radius: 25px;
         box-shadow: 0px 0px 15px rgb(177, 184, 194);
-        opacity: 0;
         transition: opacity 0.3s ease;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-around;
     }
@@ -235,7 +234,7 @@
     }
 
     #check:checked~.menu ul {
-        opacity: 1;
+        display: flex;
     }
 
     .first-content .content a {
