@@ -73,6 +73,7 @@
     margin-right: -12px;
     background-color: white;
     border-radius: 10px;
+    font-size: 1rem;
 }
 
 .Search a .fas {
@@ -158,33 +159,34 @@
 
 .Kn-content .allCard {
     margin-top: 65px;
+    margin-inline: 5.5%;
 }
 
 .swiper {
-    margin-top: -40px;
+    margin-top: -45px;
 }
 
-.Kn-content .swiper-button-prev,
+.Kn-content .swiper-button-prev {
+    color: rgb(54, 48, 98);
+    background-color: rgb(223, 223, 223);
+    border-radius: 20px;
+    padding: 8px;
+    padding-left: 5px;
+    padding-right: 10px;
+    font-weight: bold;
+    margin-inline: 7px;
+}
+
 .Kn-content .swiper-button-next {
     color: rgb(54, 48, 98);
     background-color: rgb(223, 223, 223);
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 5px;
     font-weight: bold;
-    margin-inline: -10px;
+    margin-inline: 7px;
 }
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 1000px) {
     .checkbtn {

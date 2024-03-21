@@ -1,6 +1,6 @@
 <?php require 'connect.php';
-$search = $_GET['search'];
-$sql = "SELECT * FROM youtube WHERE Title LIKE '%$search%' ORDER BY Title ASC";
+$search = $_GET['searchOther'];
+$sql = "SELECT * FROM otdisease WHERE Title LIKE '%$search%' ORDER BY Title ASC";
 $result = mysqli_query($connect, $sql);
 ?>
 
@@ -9,13 +9,13 @@ $result = mysqli_query($connect, $sql);
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="picture\blueaseIcon.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Result</title>
     <script src="https://kit.fontawesome.com/274a0dc0b6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="KnowStyle.css">
-    <link rel="stylesheet" href="MainStyle.css">
-    <link rel="stylesheet" href="Kn_YoutubeStyle.css">
+    <link rel="stylesheet" href="OtStyle.css">
     <link rel="stylesheet" href="CardStyle.css">
+    <link rel="stylesheet" href="MainStyle.css">
 </head>
 
 <body>
@@ -43,19 +43,22 @@ $result = mysqli_query($connect, $sql);
                     <i class="fas fa-bars"></i>
                 </label>
         </nav>
-        <div class="Knowledge-choice">
-            <a id="youtube1">Youtube & Podcast</a>
-            <a id="app" href="searchApp.php?search=<?php echo urlencode($search); ?>">Application</a>
-            <a id="books" href="searchBook.php?search=<?php echo urlencode($search); ?>">Books</a>
+        <div class="searchBar">
+            <div class="search">
+                <form id="searchFormOther" name="searchOther" method="get" action="searchOther.php">
+                    <input type="text" placeholder="ค้นหา.." name="searchOther" required>
+                    <a href="javascript:void(0);" onclick="document.getElementById('searchFormOther').submit();">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </form>
+            </div>
         </div>
         <div class="allCard">
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="card">
                     <img src=<?php echo $row["Image"]; ?> alt="">
                     <a href=<?php echo $row["Link"]; ?> target="_blank"> <?php echo $row["Title"]; ?> </a>
-                    <p>
-                        <?php echo $row["Author"]; ?>
-                    </p>
+                    <p> <?php echo $row["Author"]; ?> </p>
                 </div>
             <?php } ?>
         </div>
