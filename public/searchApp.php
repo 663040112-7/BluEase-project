@@ -9,6 +9,7 @@ $result = mysqli_query($connect, $sql);
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="picture\blueaseIcon.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Result</title>
     <script src="https://kit.fontawesome.com/274a0dc0b6.js" crossorigin="anonymous"></script>
