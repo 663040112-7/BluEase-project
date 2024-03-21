@@ -195,10 +195,6 @@
         display: block;
     }
 
-    html {
-        overflow-x: hidden;
-    }
-
     .main-body .heading {
         font-size: 1.5rem;
     }
@@ -220,7 +216,8 @@
         border-top-right-radius: 25px;
         border-bottom-left-radius: 25px;
         box-shadow: 0px 0px 15px rgb(177, 184, 194);
-        transform: translateX(130%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -240,8 +237,7 @@
     }
 
     #check:checked~.menu ul {
-        transition: .2s;
-        transform: translateX(0%);
+        opacity: 1;
     }
 
     .first-content .content a {
