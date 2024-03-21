@@ -75,68 +75,7 @@
             }
         });
     }
-    var lineLayer, polygonLayer, pointLayer, mp;
-        var prePointLayer, prePolygonLayer;
-        var currentType = "point";
-        var points = [];
-        var lstLabel = [];
-        var isFirstLoad = true;
-
-        nostra.onready = function () {
-            initialize();
-        };
-        var data = [
-            {
-                name: "AREA-A",
-                lat: 13.763262,
-                lon: 100.525173
-            },
-            {
-                name: "AREA-B",
-                lat: 13.765200,
-                lon: 100.535055
-            },
-            {
-                name: "AREA-C",
-                lat: 13.7684260,
-                lon: 100.5356024
-            }
-        ]
-        function initialize() {
-            map = new nostra.maps.Map("map", {
-                id: "mapTest",
-                logo: true,
-                scalebar: true,
-                slider: true,
-                level: 15,
-                lat: data[1].lat,
-                lon: data[1].lon
-            });
-
-            pointLayer = new nostra.maps.layers.GraphicsLayer(map, { id: "pointLayer", mouseOver: false });
-            map.addLayer(pointLayer);
-
-            for(item in data){
-            let nostraCallout = new nostra.maps.Callout({
-                title: data[item].name, content: "test"
-            });
-
-            let nostraLabel = new nostra.maps.symbols.Label({
-                text: data[item].name,
-                size: "12",
-                position: "top",
-                color: "434343",
-                haloColor: "#ffffff",
-                haloSize: "1",
-                xoffset: "0",
-                yoffset: "0"
-            });
-            lstLabel.push(nostraLabel);
-            
-            let pointMarker = new nostra.maps.symbols.Marker({ url: "", width: 60, height: 60, attributes: { POI_NAME: "TestAttr", POI_ROAD: "TestAttr" }, callout: nostraCallout, label: nostraLabel });
-            pointLayer.addMarker(data[item].lat, data[item].lon, pointMarker);
-            }
-        }
+  
 
 </script>
 
@@ -180,17 +119,6 @@
             <button onclick="Search()">Search</button>
         </div>
         <div id="result"></div>
-        <!-- <div class="map-container" id="map1"></div>
-        <div class="map-container" id="map2"></div>
-        <div class="map-container" id="map3"></div>
-        <div class="map-container" id="map4"></div>
-        <div class="map-container" id="map5"></div>
-        <div class="map-container" id="map6"></div>
-        <div class="map-container" id="map7"></div>
-        <div class="map-container" id="map8"></div>
-        <div class="map-container" id="map9"></div>
-        <div class="map-container" id="map10"></div> -->
-        <div id="map"></div>
 </body>
 
 </html>
