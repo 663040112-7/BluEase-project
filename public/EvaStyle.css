@@ -129,6 +129,8 @@ table td .radio-button input {
     background-color: rgba(55, 90, 123, .95);
     color:white;
     border-radius: 15px 15px 0 0 ;
+    border-color: rgb(100, 152, 201);
+    border-width: 5px;
   }
 
 .popup h2 {
@@ -221,6 +223,10 @@ table td .radio-button input {
     #submitBtn {
         font-size: 1rem;
     }
+    
+    .popup h2 {
+        font-size: 1.7rem;
+    }
 }
 
 @media (max-width: 700px) {
@@ -255,6 +261,21 @@ table td .radio-button input {
         width: 16px;
     }
 
+    .popup h2 {
+        font-size: 1.6rem;
+    }
+    
+    .popup p{
+        font-size: 1.3rem;
+    }
+
+    .popup #result {
+        font-size: 1.5rem;
+    }
+    .popup #suggest {
+        font-size: 1.3rem;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -277,6 +298,23 @@ table td .radio-button input {
 
     table td .radio-button input {
         margin: 5px;
+    }
+
+    
+    .popup h2 {
+        font-size: 1.3rem;
+        padding: 7px;
+    }
+    
+    .popup p{
+        font-size: 1.1rem;
+    }
+
+    .popup #result {
+        font-size: 1.2rem;
+    }
+    .popup #suggest {
+        font-size: 1.1rem;
     }
 }
 
@@ -304,6 +342,21 @@ table td .radio-button input {
 
     table td .radio-button input {
         margin: 3px;
+    }
+    
+    .popup h2 {
+        font-size: 1rem;
+    }
+    
+    .popup p{
+        font-size: .8rem;
+    }
+
+    .popup #result {
+        font-size: 1rem;
+    }
+    .popup #suggest {
+        font-size: .9rem;
     }
 }
 
