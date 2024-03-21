@@ -256,6 +256,10 @@ table td .radio-button input {
         padding: 1px 8px;
     }
 
+    .value {
+        margin-right: -1px;
+    }
+
     table td .radio-button input {
         margin: 8px;
         width: 16px;
