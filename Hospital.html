@@ -74,6 +74,59 @@
             }
         });
     }
+    function map(searchResults) {
+            var lineLayer, polygonLayer, pointLayer, mp;
+            var prePointLayer, prePolygonLayer;
+            var currentType = "point";
+            var points = [];
+            var lstLabel = [];
+            var isFirstLoad = true;
+
+            nostra.onready = function () {
+                initialize();
+            };
+
+            function initialize() {
+                var mapDiv = document.createElement("div");
+                mapDiv.setAttribute("id", "map");
+                document.body.appendChild(mapDiv);
+                map = new nostra.maps.Map("map", {
+                    id: "mapTest",
+                    logo: true,
+                    scalebar: false,
+                    slider: true,
+                    level: 14,
+                    lat: 13.7684254, //future plan
+                    lon: 100.5356024 //future plan
+                });
+
+                pointLayer = new nostra.maps.layers.GraphicsLayer(map, { id: "pointLayer", mouseOver: false });
+                map.addLayer(pointLayer);
+
+                for (item in searchResults) {
+                    let nostraCallout = new nostra.maps.Callout({
+                        title: searchResults[i].name, content: "test"
+                    });
+
+                    let nostraLabel = new nostra.maps.symbols.Label({
+                        text: searchResults[i].name,
+                        size: "12",
+                        position: "top",
+                        haloColor: "#ffffff",
+                        haloSize: "1",
+                        xoffset: "0",
+                        yoffset: "0"
+                    });
+                    lstLabel.push(nostraLabel);
+
+                    let pointMarker = new nostra.maps.symbols.Marker({ url: "", width: 60, height: 60, attributes: { POI_NAME: "TestAttr", POI_ROAD: "TestAttr" }, callout: nostraCallout, label: nostraLabel });
+                    pointLayer.addMarker(searchResults[item].lat, searchResults[item].lon, pointMarker);
+
+                }
+            }
+        }
+        var data = [{}];
+        map(data);
   
 
 </script>
@@ -119,6 +172,7 @@
             </div>
             <button onclick="Search()">Search</button>
         </div>
+        <div id="map"></div>
         <div id="result"></div>
 </body>
 
